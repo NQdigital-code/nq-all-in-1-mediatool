@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NQ All-in-1 MediaTool | Offline photo, video, PDF and speech tools for Windows</title>
+<meta name="description" content="Remove backgrounds, convert and compress photos and videos, work with PDFs and spreadsheets, and turn speech into text. All on your own Windows PC, with nothing uploaded. Free 30-day tester build.">
+<meta name="theme-color" content="#f2f4fb">
+<link rel="icon" href="img/favicon.png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="NQ All-in-1 MediaTool">
+<meta property="og:description" content="Edit, convert and transcribe on your own PC. Nothing is uploaded. Free 30-day tester build for Windows.">
+<meta property="og:image" content="https://nqdigital-code.github.io/nq-all-in-1-mediatool/img/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:wght@400;500;700;800&family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,600..800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top" id="top"><span class="mark"><img src="img/logo-white.png" alt=""></span>NQ All-in-1 MediaTool</a>
+    <nav aria-label="Main">
+      <a href="#tools">What's inside</a>
+      <a href="#refine">Refine tool</a>
+      <a href="#faq">FAQ</a>
+      <a class="btn btn-amber btn-sm" href="#get">Download</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero" aria-labelledby="h1">
+    <div class="wrap">
+      <div>
+        <h1 id="h1">Edit, convert and transcribe without uploading a thing.</h1>
+        <p class="lede">NQ All-in-1 MediaTool is a Windows app with 11 tools: background remover, photo and video converters, PDF and spreadsheet tools, and speech to text. It all runs on your own PC.</p>
+        <div class="cta">
+          <a class="btn btn-amber" href="https://github.com/NQdigital-code/nq-all-in-1-mediatool/releases/latest/download/NQ-All-in-1-MediaTool-Tester-portable.exe" id="dl-hero">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0 5-5m-5 5-5-5M4 20h16"/></svg>
+            Download for Windows
+          </a>
+          <a class="btn btn-ghost" href="#tools">See what's inside</a>
+        </div>
+        <p class="fine">Free tester build, 237 MB. Works for 30 days from first use.</p>
+        <ul class="ticks">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m7.5 12.5 3 3 6-7"/></svg>No account or sign-up</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m7.5 12.5 3 3 6-7"/></svg>Your files never leave your PC</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m7.5 12.5 3 3 6-7"/></svg>Windows 10 and 11</li>
+        </ul>
+      </div>
+
+      <figure class="lightbox" style="margin:0">
+        <div class="chips" role="group" aria-label="Choose an example">
+          <button class="chip" type="button" data-ex="man" aria-pressed="true">Portrait</button>
+          <button class="chip" type="button" data-ex="statue" aria-pressed="false">Product</button>
+        </div>
+        <div class="stage" id="stage">
+          <img class="layer" id="img-orig" src="img/man-original.webp" alt="Original photo with its background" width="900" height="1372">
+          <div class="cut"><img id="img-cut" src="img/man-cutout.webp" alt="The same photo with the background removed" width="900" height="1372"></div>
+          <input id="range" type="range" min="0" max="100" value="50" aria-label="Drag to compare the original photo with the cut-out">
+          <div class="handle" aria-hidden="true"><span class="grip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m9 7-5 5 5 5M15 7l5 5-5 5"/></svg></span></div>
+          <span class="tag l">Original</span><span class="tag r">Cut-out</span>
+        </div>
+        <figcaption id="caption">Drag to compare. This cut-out was made by the app, offline. Photo: Library of Congress, public domain.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="band" id="tools" aria-labelledby="tools-h">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 id="tools-h">Everything you keep opening five websites for</h2>
+        <p>One window, one download. Add a whole folder and the app works through every file for you.</p>
+      </div>
+      <div class="tools">
+        <div class="group">
+          <h3>Photos</h3>
+          <dl>
+            <dt>Remove Background</dt><dd>People, products and animals. Save it transparent, on white or any colour, cropped square for online store listings.</dd>
+            <dt>Refine</dt><dd>Paint Keep or Erase over any spot the AI missed, then smooth the edges for your website or shop.</dd>
+            <dt>Image Converter</dt><dd>PNG, JPG, WebP, AVIF, GIF and TIFF. Opens iPhone HEIC photos too.</dd>
+            <dt>Compress Image</dt><dd>Much smaller files that still look the same.</dd>
+            <dt>Enhance Image</dt><dd>AI upscaling that uses your graphics card.</dd>
+          </dl>
+        </div>
+        <div class="group">
+          <h3>Video</h3>
+          <dl>
+            <dt>Video Converter</dt><dd>MP4, MKV, MOV, WebM, AVI or GIF. Pull out the audio as MP3.</dd>
+            <dt>Compress Video</dt><dd>Shrink big recordings with H.265, with optional NVIDIA GPU encoding.</dd>
+            <dt>Enhance Video</dt><dd>Sharpen old or low-resolution clips with AI upscaling.</dd>
+          </dl>
+        </div>
+        <div class="group">
+          <h3>Documents</h3>
+          <dl>
+            <dt>PDF &amp; Documents</dt><dd>PDF to text, Word or images, and back again. Scanned pages are read with OCR.</dd>
+            <dt>Spreadsheets &amp; Tables</dt><dd>Excel, CSV, ODS, HTML, JSON and PDF. Pull tables out of PDFs straight into Excel.</dd>
+            <dt>Image to Text</dt><dd>Copy the words out of any picture or screenshot.</dd>
+          </dl>
+        </div>
+        <div class="group">
+          <h3>Voice</h3>
+          <dl>
+            <dt>Speech to Text</dt><dd>Turn audio or video into text or subtitles, or record straight from your microphone. Understands accents, in English and Filipino.</dd>
+            <dt>Batch mode</dt><dd>Drop in a folder of 200 photos or recordings and walk away.</dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="refine" aria-labelledby="refine-h">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 id="refine-h">When the AI misses a spot, you fix it in seconds</h2>
+        <p>Every cut-out opens in the Refine editor. Paint Keep to bring back something that was removed, paint Erase to clear leftover background. Then press Auto smooth edges for a clean outline.</p>
+      </div>
+      <div class="shots">
+        <figure class="shot shot-a">
+          <div class="win"><div class="bar"><i></i><i></i><i></i></div><img src="img/app-removebg.webp" alt="The Remove Background tool with a finished result and a Refine button" width="1280" height="800" loading="lazy"></div>
+          <figcaption><b>Pick a photo, press Start.</b> Auto mode chooses the right engine for people or products. A Refine button appears on every result.</figcaption>
+        </figure>
+        <figure class="shot shot-b">
+          <div class="win"><div class="bar"><i></i><i></i><i></i></div><img src="img/app-refine.webp" alt="The Refine editor with Keep and Erase brushes and smoothing sliders" width="1280" height="800" loading="lazy"></div>
+          <figcaption><b>Brush, undo, zoom.</b> Your strokes are saved at the photo's full resolution, not a shrunken preview.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" aria-labelledby="speech-h">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 id="speech-h">Speech to text that copes with real voices</h2>
+        <p>We tested it on 45 recordings of English spoken with accents from 11 language backgrounds, including Indian, Chinese, Japanese, Spanish and Polish speakers. Pick the level that fits the job.</p>
+      </div>
+      <div class="levels">
+        <div class="level"><h3>Standard</h3><div class="size">Built in, nothing to download</div><p class="d">Fastest. Good for clear speech and quick drafts.</p></div>
+        <div class="level"><h3>Better</h3><div class="size">One-time 181 MB download</div><p class="d">The balanced choice, and the default. Noticeably fewer mistakes on accented speech.</p></div>
+        <div class="level best"><h3>High accuracy</h3><div class="size">One-time 574 MB download</div><p class="d">Best for strong accents and important recordings. In our test it made about one third fewer word errors than Standard. It is slower, since it runs on your processor.</p></div>
+      </div>
+      <p class="note">Results come from our own test and will vary with your recording quality. The app also cleans up the audio and skips silence before transcribing.</p>
+    </div>
+  </section>
+
+  <section aria-labelledby="priv-h">
+    <div class="wrap private">
+      <h2 id="priv-h">Your files stay on your computer. All of them.</h2>
+      <div class="facts">
+        <div><h3>No accounts, no tracking</h3><p>There is no sign-up, no analytics and no cloud. The app never uploads what you open.</p></div>
+        <div><h3>The internet is optional</h3><p>You only go online once to download the AI models you choose, such as 196 MB for Remove Background. After that, everything works with the cable unplugged.</p></div>
+        <div><h3>Your originals are safe</h3><p>Results are saved as new files next to the original. The app never overwrites your photo, video or document.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="get" aria-labelledby="get-h" style="padding-top:0">
+    <div class="wrap">
+      <div class="get">
+        <div>
+          <h2 id="get-h">Try it free for 30 days</h2>
+          <p class="lead">The tester build has every tool unlocked. Tell me what works and what doesn't, and I'll keep improving it.</p>
+          <a class="btn btn-amber" href="https://github.com/NQdigital-code/nq-all-in-1-mediatool/releases/latest/download/NQ-All-in-1-MediaTool-Tester-portable.exe" id="dl-main">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0 5-5m-5 5-5-5M4 20h16"/></svg>
+            Download for Windows (237 MB)
+          </a>
+        </div>
+        <ol class="steps">
+          <li><div><b>Download and double-click</b><span>There is nothing to install. It is a single file.</span></div></li>
+          <li><div><b>If Windows says "Windows protected your PC"</b><span>Click More info, then Run anyway. The tester build is not code-signed yet.</span></div></li>
+          <li><div><b>Wait for the launch screen</b><span>The app unpacks itself every time it starts, so the first window can take 10 to 30 seconds.</span></div></li>
+        </ol>
+        <div class="sum">
+          <span class="lab">SHA-256 of the download</span>
+          <code id="sha">3FF6E562684F73F33F0BC49AA2449418DC574B50374B7E62B661DC21C8B91BCD</code>
+          <button type="button" id="copy">Copy</button>
+        </div>
+      </div>
+      <ul class="reqs"><li>Windows 10 or 11, 64-bit</li><li>8 GB RAM recommended</li><li>About 1 GB free disk space</li><li>A Vulkan graphics card for AI upscaling</li></ul>
+    </div>
+  </section>
+
+  <section class="band" id="faq" aria-labelledby="faq-h">
+    <div class="wrap">
+      <div class="sec-head"><h2 id="faq-h">Questions people ask</h2></div>
+      <div class="faq">
+        <details><summary>Does it really work without internet?</summary><p>Yes. Internet is only used to download the optional AI models the first time you pick them. Once they are on your PC, every tool works offline.</p></details>
+        <details><summary>What happens after the 30 days?</summary><p>The app shows "Testing period is over. Contact kneelq@gmail.com to avail the pro version." and stops opening files. Your own files and results are untouched.</p></details>
+        <details><summary>Why does Windows show a warning?</summary><p>The tester build is not code-signed yet, so Windows is cautious about any new program. Click More info, then Run anyway. You can compare the SHA-256 above with your download to be sure it is genuine.</p></details>
+        <details><summary>How good is the background removal?</summary><p>Very good on clear subjects, and it works on people, products and pets. Dark clothing with white graphics, hair touching the edge of the picture and very busy backgrounds can leave spots. That is what Refine is for.</p></details>
+        <details><summary>Can I use it on a Mac or a phone?</summary><p>Not yet. This first version is Windows only.</p></details>
+        <details><summary>Which files can it open?</summary><p>Photos in JPG, PNG, WebP, AVIF, GIF, TIFF, BMP and iPhone HEIC. Common video and audio formats, PDF, Word (.docx), Excel, CSV and more.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="pro-h">
+    <div class="wrap">
+      <div class="pro">
+        <div><h2 id="pro-h">Want the Pro version?</h2><p>Longer licences and the full toolset for people who use it every day. Tell me what you need and I'll get back to you.</p></div>
+        <a class="btn btn-amber" href="mailto:kneelq@gmail.com?subject=NQ%20All-in-1%20MediaTool%20Pro">Email kneelq@gmail.com</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>&copy; 2026 Neil Quigao. All rights reserved.</span>
+    <span class="sp">
+      <a href="https://github.com/NQdigital-code/nq-all-in-1-mediatool/blob/main/TERMS.md">Tester terms</a>
+      <a href="https://github.com/NQdigital-code/nq-all-in-1-mediatool/blob/main/THIRD_PARTY_NOTICES.md">Open-source notices</a>
+      <a href="https://github.com/NQdigital-code/nq-all-in-1-mediatool/releases">All releases</a>
+      <a href="mailto:kneelq@gmail.com">Contact</a>
+    </span>
+  </div>
+</footer>
+<script src="app.js"></script>
+</body>
+</html>
