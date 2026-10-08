@@ -133,6 +133,8 @@ section { padding: 96px 0; }
 .get h2 { font-size: clamp(2rem, 4vw, 3.2rem); font-weight: 800; }
 .get .lead { margin-top: 16px; color: #c9d0f2; font-size: 1.12rem; max-width: 28rem; }
 .get .btn-amber { margin-top: 28px; }
+.get .alt { margin-top: 16px; font-size: .95rem; color: #c9d0f2; }
+.get .alt a { color: #fff; text-underline-offset: 3px; }
 .steps { list-style: none; counter-reset: s; padding: 0; margin: 0; display: grid; gap: 22px; }
 .steps li { counter-increment: s; display: grid; grid-template-columns: 44px 1fr; gap: 16px; }
 .steps li::before { content: counter(s); width: 44px; height: 44px; border-radius: 50%; background: var(--amber); color: var(--amber-ink); font: 800 1.2rem/44px var(--display); text-align: center; }

@@ -4,13 +4,13 @@
 
 Convert, compress, clean up and transcribe your images, videos, documents and audio — **on your own PC**. Your files are never uploaded anywhere.
 
-> **Status: free tester build (v1.0.0-tester.2).** It is being tested before a full release. Features, limits and pricing may change. Your feedback is what shapes it — see [Feedback](#feedback).
+> **Status: free tester build (v1.0.0-tester.3).** It is being tested before a full release. Features, limits and pricing may change. Your feedback is what shapes it — see [Feedback](#feedback).
 >
 > **Testing period: 30 days from first use.** After that the app shows "Testing period is over. Contact kneelq@gmail.com to avail the pro version." and stops working.
 
 ## Download
 
-Go to the **[Releases page](../../releases/latest)** and download `NQ-All-in-1-MediaTool-Tester-portable.exe` (about 237 MB).
+Go to the **[Releases page](../../releases/latest)** and download `NQ-All-in-1-MediaTool-Tester-portable.exe` (about 146 MB). The [website](https://nqdigital-code.github.io/nq-all-in-1-mediatool/) offers the same file from a faster server.
 
 No installation needed: double-click to run. The app unpacks itself every time you start it, so the first screen can take 10–30 seconds to appear. Please wait for the launch screen.
 
@@ -53,6 +53,8 @@ Get-FileHash .\NQ-All-in-1-MediaTool-Tester-portable.exe -Algorithm SHA256
 | When you use… | Download |
 |---|---|
 | Remove Background | 196 MB (two models: 26 MB + 170 MB) |
+| Enhance Image (photo) / (anime) | 32 MB / 9 MB |
+| Speech to Text → "Standard" accuracy | 57 MB |
 | Speech to Text → "Better" accuracy (default) | 181 MB |
 | Speech to Text → "High accuracy" (best for accents) | 574 MB |
 
