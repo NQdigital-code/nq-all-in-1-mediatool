@@ -61,12 +61,12 @@ p { margin: 0; }
 
 /* before / after stage */
 .lightbox { background: #fff; border-radius: var(--radius-xl); padding: 16px; box-shadow: 0 40px 70px -34px rgba(14, 20, 51, .5), 0 0 0 1px var(--line); }
-.chips { display: flex; gap: 8px; margin-bottom: 14px; }
-.chip { font: 700 .95rem/1 var(--body); padding: 10px 16px; border-radius: 999px; border: 0; cursor: pointer; background: var(--paper-2); color: var(--ink-2); }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px; }
+.chip { font: 700 .95rem/1 var(--body); white-space: nowrap; padding: 10px 16px; border-radius: 999px; border: 0; cursor: pointer; background: var(--paper-2); color: var(--ink-2); }
 .chip[aria-pressed="true"] { background: var(--ink); color: #fff; }
 .chip:hover { color: var(--ink); background: var(--indigo-soft); }
 .chip[aria-pressed="true"]:hover { background: var(--ink); color: #fff; }
-.stage { --p: 50%; position: relative; border-radius: 16px; overflow: hidden; background: #cfd5ea; aspect-ratio: 4 / 5; max-height: 640px; width: 100%; touch-action: pan-y; user-select: none; }
+.stage { --p: 50%; position: relative; border-radius: 16px; overflow: hidden; background: #fff; box-shadow: 0 0 0 1px var(--line); aspect-ratio: 4 / 5; max-height: 640px; width: 100%; touch-action: pan-y; user-select: none; }
 .stage .layer { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 .stage .cut { position: absolute; inset: 0; background: var(--checker); clip-path: inset(0 0 0 var(--p)); }
 .stage .cut img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }

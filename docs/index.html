@@ -56,17 +56,18 @@
 
       <figure class="lightbox" style="margin:0">
         <div class="chips" role="group" aria-label="Choose an example">
-          <button class="chip" type="button" data-ex="man" aria-pressed="true">Portrait</button>
-          <button class="chip" type="button" data-ex="statue" aria-pressed="false">Product</button>
+          <button class="chip" type="button" data-ex="pad" aria-pressed="true">White on white</button>
+          <button class="chip" type="button" data-ex="retro" aria-pressed="false">Colourful</button>
+          <button class="chip" type="button" data-ex="console" aria-pressed="false">Whole set</button>
         </div>
         <div class="stage" id="stage">
-          <img class="layer" id="img-orig" src="img/man-original.webp" alt="Original photo with its background" width="900" height="1372">
-          <div class="cut"><img id="img-cut" src="img/man-cutout.webp" alt="The same photo with the background removed" width="900" height="1372"></div>
+          <img class="layer" id="img-orig" src="img/pad-original.webp" alt="A white game controller photographed on a white background" width="1100" height="1002">
+          <div class="cut"><img id="img-cut" src="img/pad-cutout.webp" alt="The same controller with the background removed" width="1100" height="1002"></div>
           <input id="range" type="range" min="0" max="100" value="50" aria-label="Drag to compare the original photo with the cut-out">
           <div class="handle" aria-hidden="true"><span class="grip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m9 7-5 5 5 5M15 7l5 5-5 5"/></svg></span></div>
           <span class="tag l">Original</span><span class="tag r">Cut-out</span>
         </div>
-        <figcaption id="caption">Drag to compare. This cut-out was made by the app, offline. Photo: Library of Congress, public domain.</figcaption>
+        <figcaption id="caption">Drag to compare. This cut-out was made by the app, offline, in under a second. Photo: Evan-Amos, public domain.</figcaption>
       </figure>
     </div>
   </section>
@@ -81,7 +82,7 @@
         <div class="group">
           <h3>Photos</h3>
           <dl>
-            <dt>Remove Background</dt><dd>People, products and animals. Save it transparent, on white or any colour, cropped square for online store listings.</dd>
+            <dt>Remove Background</dt><dd>Studio-style product photos are cut out exactly, even white on white. It also handles people and pets. Save it transparent, on white or any colour, cropped square for online store listings.</dd>
             <dt>Refine</dt><dd>Paint Keep or Erase over any spot the AI missed, then smooth the edges for your website or shop.</dd>
             <dt>Image Converter</dt><dd>PNG, JPG, WebP, AVIF, GIF and TIFF. Opens iPhone HEIC photos too.</dd>
             <dt>Compress Image</dt><dd>Much smaller files that still look the same.</dd>
@@ -178,7 +179,7 @@
         </ol>
         <div class="sum">
           <span class="lab">SHA-256 of the download</span>
-          <code id="sha">E3056C5E601801CBE87AEDB9B56EE69180E8EE6EAA32F0B4FE54D4B13CCD0AD3</code>
+          <code id="sha">03E9BF3D6AD4BFA8BBDCE4936D0A2116A024267A887B75856CC61FB0F73D1417</code>
           <button type="button" id="copy">Copy</button>
         </div>
       </div>
@@ -193,7 +194,7 @@
         <details><summary>Does it really work without internet?</summary><p>Yes. Internet is only used to download the optional AI models the first time you pick them. Once they are on your PC, every tool works offline.</p></details>
         <details><summary>What happens after the 30 days?</summary><p>The app shows "Testing period is over. Contact kneelq@gmail.com to avail the pro version." and stops opening files. Your own files and results are untouched.</p></details>
         <details><summary>Why does Windows show a warning?</summary><p>The tester build is not code-signed yet, so Windows is cautious about any new program. Click More info, then Run anyway. You can compare the SHA-256 above with your download to be sure it is genuine.</p></details>
-        <details><summary>How good is the background removal?</summary><p>Very good on clear subjects, and it works on people, products and pets. Dark clothing with white graphics, hair touching the edge of the picture and very busy backgrounds can leave spots. That is what Refine is for.</p></details>
+        <details><summary>How good is the background removal?</summary><p>Product photos on a plain background are cut out exactly. People and pets work well on clear photos. Backgrounds that fade from light to dark, dark clothing with white graphics, hair touching the edge of the picture and very busy scenes can leave spots. That is what Refine is for.</p></details>
         <details><summary>Can I use it on a Mac or a phone?</summary><p>Not yet. This first version is Windows only.</p></details>
         <details><summary>Which files can it open?</summary><p>Photos in JPG, PNG, WebP, AVIF, GIF, TIFF, BMP and iPhone HEIC. Common video and audio formats, PDF, Word (.docx), Excel, CSV and more.</p></details>
       </div>

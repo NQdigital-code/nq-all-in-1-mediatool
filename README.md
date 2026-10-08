@@ -4,7 +4,7 @@
 
 Convert, compress, clean up and transcribe your images, videos, documents and audio — **on your own PC**. Your files are never uploaded anywhere.
 
-> **Status: free tester build (v1.0.0-tester.1).** It is being tested before a full release. Features, limits and pricing may change. Your feedback is what shapes it — see [Feedback](#feedback).
+> **Status: free tester build (v1.0.0-tester.2).** It is being tested before a full release. Features, limits and pricing may change. Your feedback is what shapes it — see [Feedback](#feedback).
 >
 > **Testing period: 30 days from first use.** After that the app shows "Testing period is over. Contact kneelq@gmail.com to avail the pro version." and stops working.
 
@@ -23,7 +23,7 @@ No installation needed: double-click to run. The app unpacks itself every time y
 | Image to Text (OCR) | Read text from images and save as .txt (English) |
 | Compress Image | Smaller files with no visible quality loss |
 | Compress Video | H.265 re-encode, optional NVIDIA GPU encoding |
-| Remove Background | AI cut-out for people and objects; transparent, white or colour background, square crop; optional edge smoothing for product and website images |
+| Remove Background | Product photos on a plain background are cut out exactly; AI cut-out for people and pets; transparent, white or colour background, square crop; optional edge smoothing for product and website images |
 | **Refine** (after Remove Background) | Paint **Keep** / **Erase** over the result to fix any spot, with undo, zoom and an **Auto smooth edges** button |
 | Enhance Image / Video | AI upscaling (Real-ESRGAN, uses your GPU) |
 | PDF & Documents | PDF ⇄ text / Word / images (scanned pages use OCR) |
@@ -58,7 +58,7 @@ Get-FileHash .\NQ-All-in-1-MediaTool-Tester-portable.exe -Algorithm SHA256
 
 ## Known limitations (tester build)
 
-- Background removal works best on clear subjects. Dark clothing with white graphics, hair that touches the edge of the picture, and very busy backgrounds can leave imperfect spots — use **Refine** to fix them.
+- Background removal is exact for product photos on a plain or white background, and works best on clear subjects otherwise (backgrounds that fade from light to dark are the hardest). Dark clothing with white graphics, hair that touches the edge of the picture, and very busy backgrounds can leave imperfect spots — use **Refine** to fix them.
 - Speech to Text runs on the CPU, so long recordings take time ("High accuracy" is the slowest).
 - Video enhancement is slow and needs a lot of free disk space.
 - PDF-to-Word keeps text only, not layout or fonts. PDF tables work best on text-based (not scanned) PDFs.
