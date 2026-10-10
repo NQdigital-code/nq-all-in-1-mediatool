@@ -273,16 +273,21 @@ footer .legal { grid-column: 1 / -1; border-top: 1px solid #1e2a47; padding-top:
 @media (max-width: 760px) { .rs3 { grid-template-columns: 1fr; } .about .wrap { grid-template-columns: 1fr; gap: 24px; } .who { max-width: 340px; } .sline { grid-template-columns: 1fr; gap: 6px; } }
 
 /* before you download */
-.notice { padding: 56px 0 8px; }
-.notice .wrap { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
-.nc { border-radius: 18px; padding: 30px 32px; border: 1px solid var(--line); background: var(--white); }
-.nc h2 { font-size: clamp(1.5rem, 2.4vw, 1.95rem); margin-bottom: 12px; }
-.nc p { max-width: 36em; }
-.nc ul, .nc ol { margin: 0 0 20px; padding-left: 1.2em; }
-.nc li { margin-bottom: 6px; }
-.nc-pro { background: var(--amber-soft); border-color: #f0d98a; }
-.nc-pro h2 { color: var(--amber-ink); }
-.nc-win { background: var(--good-soft); border-color: #b9e3d4; }
-.nc-win h2 { color: #0b5a45; }
-.nc-win .small { margin: 0; color: #35594e; }
-@media (max-width: 900px) { .notice .wrap { grid-template-columns: 1fr; } .nc { padding: 24px 22px; } }
+.notice { padding: 40px 0 0; }
+.nbar { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); background: var(--white); border: 1px solid var(--line); border-radius: 20px; box-shadow: var(--shadow); overflow: hidden; }
+.nc { display: grid; grid-template-columns: 52px minmax(0, 1fr); gap: 18px; padding: 26px 30px; position: relative; }
+.nc + .nc { border-left: 1px solid var(--line); }
+.nc::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 4px; background: var(--amber); }
+.nc + .nc::before { background: var(--good); }
+.ic { width: 52px; height: 52px; border-radius: 14px; display: grid; place-items: center; }
+.ic svg { width: 26px; height: 26px; }
+.ic-gold { background: var(--amber-soft); color: var(--amber-ink); }
+.ic-green { background: var(--good-soft); color: var(--good); }
+.nc h2 { font-size: 1.22rem; line-height: 1.2; letter-spacing: -.015em; margin: 2px 0 8px; }
+.nc p { font-size: .96rem; line-height: 1.55; margin: 0 0 12px; max-width: 34em; }
+.chain { list-style: none; display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 12px; padding: 0; }
+.chain li { background: var(--good-soft); color: #0b5a45; border-radius: 999px; padding: 5px 12px; font-size: .88rem; font-weight: 500; }
+.chain li + li::before { content: "\2192"; margin-right: 8px; color: var(--good); }
+.nlink { font-weight: 600; font-size: .95rem; text-decoration: none; }
+.nlink:hover { text-decoration: underline; }
+@media (max-width: 900px) { .nbar { grid-template-columns: 1fr; } .nc + .nc { border-left: 0; border-top: 1px solid var(--line); } .nc { padding: 22px 20px; grid-template-columns: 44px minmax(0, 1fr); gap: 14px; } .ic { width: 44px; height: 44px; } }
