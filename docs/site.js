@@ -1,5 +1,5 @@
 // release details shown on the page. `node release.js path\to\exe version` rewrites this block.
-const RELEASE = { version: '1.0.0', sha256: 'aa7831e4ff2845e36bcedf7d85e7a6d7de95b09d2e1822a5731f62290eb85117', url: 'https://github.com/NQdigital-code/nq-all-in-1-mediatool/releases/latest', published: true };
+const RELEASE = { version: '1.0.0', sha256: 'aa7831e4ff2845e36bcedf7d85e7a6d7de95b09d2e1822a5731f62290eb85117', url: 'https://github.com/NQdigital-code/nq-all-in-1-mediatool/releases/latest/download/NQ-All-in-1-MediaTool-portable.exe', published: true };
 document.getElementById('ver').textContent = RELEASE.version;
 document.getElementById('dlbtn').href = RELEASE.url;
 if (RELEASE.published) document.getElementById('sha').textContent = RELEASE.sha256;
