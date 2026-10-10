@@ -308,15 +308,16 @@
 </section>
 
 <section class="block" id="download" style="background:var(--white);border-block:1px solid var(--line)">
-  <div class="wrap" style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px" id="dlgrid">
+  <div class="wrap dlwrap" id="dlgrid">
     <div>
       <h2 style="margin-bottom:14px">Download for Windows</h2>
       <p>Version <span id="ver">1.0.0</span> · about 150 MB · Windows 10 or 11, 64-bit. 8 GB of memory is recommended. It is a single portable file: save it anywhere and double-click.</p>
       <p><a class="btn btn-pri" id="dlbtn" href="https://github.com/NQdigital-code/nq-all-in-1-mediatool/releases/latest/download/NQ-All-in-1-MediaTool-portable.exe" download><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 3v10m0 0l-4-4m4 4l4-4M4 16h12"/></svg>Download NQ All-in-1 MediaTool</a></p>
       <p class="small">Downloads from GitHub, where every release of this app is published.</p>
     </div>
-    <aside class="info" aria-label="Information about this release">
-      <h3>Information <small>v1.0.0 release notes</small></h3>
+    <details class="info">
+      <summary>Information <small>v1.0.0 release notes, free and Pro, Windows warning</small></summary>
+      <div class="infobody">
       <div class="ib"><b>What is in it</b>
         <ul>
           <li><b>22 tools</b> in three groups: Images, Video &amp; audio, Documents. 11 are free, 11 need a Pro key.</li>
@@ -339,7 +340,8 @@
         <p style="margin:0"><span class="hash" id="sha">SHA-256 is published with each release.</span></p>
       </div>
       <p class="small" style="margin:0">Known limits and feedback: see the <a href="https://github.com/NQdigital-code/nq-all-in-1-mediatool#readme">README</a>, click <b>Send feedback</b> in the app, or email <a href="mailto:kneelq@gmail.com">kneelq@gmail.com</a>.</p>
-    </aside>
+      </div>
+    </details>
   </div>
 </section>
 
