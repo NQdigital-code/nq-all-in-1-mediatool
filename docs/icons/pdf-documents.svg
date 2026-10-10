@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128" fill="none">
+  <defs>
+    <linearGradient id="ring" x1="14" y1="12" x2="113" y2="116" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#67D9FF"/><stop offset=".52" stop-color="#B7A1FF"/><stop offset="1" stop-color="#54E3C2"/>
+    </linearGradient>
+  </defs>
+  <circle cx="64" cy="64" r="57" stroke="url(#ring)" stroke-width="2.5" opacity=".48"/>
+  
+<path d="M34 22h43l17 17v66H34z" fill="#17233D" stroke="#FF8EA8" stroke-width="4" stroke-linejoin="round"/>
+<path d="M77 22v18h17" fill="none" stroke="#FF8EA8" stroke-width="4" stroke-linejoin="round"/>
+<path d="M45 55h37M45 66h37M45 77h25" stroke="#F4F7FF" stroke-width="4" stroke-linecap="round"/>
+<rect x="48" y="84" width="35" height="13" rx="4" fill="#FFC96B"/><text x="65.5" y="94" text-anchor="middle" font-size="9" font-family="Arial,sans-serif" font-weight="700" fill="#17233D">PDF</text>
+
+</svg>

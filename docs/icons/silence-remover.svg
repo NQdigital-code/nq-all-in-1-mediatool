@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128" fill="none">
+  <defs>
+    <linearGradient id="ring" x1="14" y1="12" x2="113" y2="116" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#67D9FF"/><stop offset=".52" stop-color="#B7A1FF"/><stop offset="1" stop-color="#54E3C2"/>
+    </linearGradient>
+  </defs>
+  <circle cx="64" cy="64" r="57" stroke="url(#ring)" stroke-width="2.5" opacity=".48"/>
+  
+<path d="M20 51h18l20-16v58L38 77H20z" fill="#17233D" stroke="#67D9FF" stroke-width="4" stroke-linejoin="round"/>
+<path d="M69 48q17 16 0 32M79 39q28 25 0 50" fill="none" stroke="#B7A1FF" stroke-width="4" stroke-linecap="round"/>
+<path d="M78 23l28 82" stroke="#FF8EA8" stroke-width="6" stroke-linecap="round"/>
+<path d="M89 30l13 0m-9 10l13 0m-8 10l13 0" stroke="#FFC96B" stroke-width="3" stroke-linecap="round"/>
+
+</svg>

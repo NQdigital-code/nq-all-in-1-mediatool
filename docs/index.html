@@ -3,226 +3,351 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>NQ All-in-1 MediaTool | Offline photo, video, PDF and speech tools for Windows</title>
-<meta name="description" content="Remove backgrounds, convert and compress photos and videos, work with PDFs and spreadsheets, and turn speech into text. All on your own Windows PC, with nothing uploaded. Free 30-day tester build.">
-<meta name="theme-color" content="#f2f4fb">
-<link rel="icon" href="img/favicon.png">
-<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
-<meta property="og:type" content="website">
+<title>NQ All-in-1 MediaTool: photo, video and document tools that run on your PC</title>
+<meta name="description" content="Remove backgrounds, compress video, read text from pictures, make ID photos and more. NQ All-in-1 MediaTool runs on your Windows PC, keeps your files on it, and works offline once set up.">
 <meta property="og:title" content="NQ All-in-1 MediaTool">
-<meta property="og:description" content="Edit, convert and transcribe on your own PC. Nothing is uploaded. Free 30-day tester build for Windows.">
-<meta property="og:image" content="https://nqdigital-code.github.io/nq-all-in-1-mediatool/img/og.jpg">
-<meta name="twitter:card" content="summary_large_image">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:wght@400;500;700;800&family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,600..800&display=swap" rel="stylesheet">
+<meta property="og:description" content="Photo, video and document tools that run on your own PC. Your files stay on it, and most of it works offline.">
+<meta property="og:image" content="img/og.jpg">
+<meta name="theme-color" content="#0f1b33">
+<link rel="icon" href="img/icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Instrument+Sans:wght@400;500;600;700&display=swap">
 <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="hero.css">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
-
 <header class="top">
   <div class="wrap">
-    <a class="brand" href="#top" id="top"><span class="mark"><img src="img/logo-white.png" alt=""></span>NQ All-in-1 MediaTool</a>
-    <nav aria-label="Main">
-      <a href="#tools">What's inside</a>
-      <a href="#refine">Refine tool</a>
-      <a href="#faq">FAQ</a>
-      <a class="btn btn-amber btn-sm" href="#get">Download</a>
+    <a class="brand" href="#top" aria-label="NQ All-in-1 MediaTool home"><img src="img/logo.png" alt=""><span>NQ All-in-1 <b>MediaTool</b></span></a>
+    <button class="menu" id="menu" aria-label="Menu" aria-expanded="false" aria-controls="nav">&#9776;</button>
+    <nav id="nav" aria-label="Main">
+      <a href="#results">Results</a>
+      <a href="#tools">All 22 tools</a>
+      <a href="#offline">Offline</a>
+      <a href="#pricing">Free and Pro</a>
+      <a href="#about">About</a>
+      <a href="#faq">Questions</a>
+      <a class="btn btn-pri btn-sm" href="#download" data-dl>Download free</a>
     </nav>
   </div>
 </header>
 
 <main id="main">
-  <section class="hero" aria-labelledby="h1">
-    <div class="wrap">
-      <div>
-        <h1 id="h1">Edit, convert and transcribe without uploading a thing.</h1>
-        <p class="lede">NQ All-in-1 MediaTool is a Windows app with 11 tools: background remover, photo and video converters, PDF and spreadsheet tools, and speech to text. It all runs on your own PC.</p>
-        <div class="cta">
-          <a class="btn btn-amber" href="https://pub-11a273028580433f93076091768a328a.r2.dev/NQ-All-in-1-MediaTool-Tester-portable.exe" id="dl-hero">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0 5-5m-5 5-5-5M4 20h16"/></svg>
-            Download for Windows
-          </a>
-          <a class="btn btn-ghost" href="#tools">See what's inside</a>
+<section class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <div class="tag"><i></i>For Windows 10 and 11 · v1.0</div>
+      <h1>Photo, video and document tools that run on your own PC.</h1>
+      <p class="lead">Remove backgrounds, shrink videos, read text from pictures, make ID photos and more. Your files are processed on your computer, and once it is set up, most of it works without internet.</p>
+      <div class="cta">
+        <a class="btn btn-pri" href="#download" data-dl><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 3v10m0 0l-4-4m4 4l4-4M4 16h12"/></svg>Download free for Windows</a>
+        <a class="btn btn-ghost" href="#pricing">See what Pro adds</a>
+      </div>
+      <ul class="facts"><li>No account or sign-in</li><li>No installer, just one file</li><li>Free to start</li></ul>
+    </div>
+    <figure class="shot">
+      <div class="hd" id="hd" data-tool="rb" aria-label="Interactive demo of the app">
+        <div class="hd-bar"><i></i><i></i><i></i><span class="hd-ttl">NQ All-in-1 MediaTool</span>
+          <button class="hd-net" id="net" type="button" aria-pressed="false" title="Pretend to switch the internet off"><span class="dot"></span><span id="netTxt">Internet on</span></button></div>
+        <div class="hd-body">
+          <div class="hd-side" role="tablist" aria-label="Choose a tool to try">
+            <button role="tab" data-tool="rb" aria-selected="true"><img src="icons/remove-background.svg" alt=""><span>Remove Background</span></button>
+            <button role="tab" data-tool="ps" aria-selected="false"><img src="icons/product-photo-studio.svg" alt=""><span>Product Studio</span><em>PRO</em></button>
+            <button role="tab" data-tool="wm" aria-selected="false"><img src="icons/watermark-printer.svg" alt=""><span>Watermark Printer</span><em>PRO</em></button>
+            <button role="tab" data-tool="sm" aria-selected="false"><img src="icons/subtitle-maker.svg" alt=""><span>Subtitle Maker</span><em>PRO</em></button>
+          </div>
+          <div class="hd-main">
+            <div class="hd-head"><b id="hdT">Remove Background</b><span id="hdS">Cut the subject out of a photo in one click.</span></div>
+            <div class="hd-stage" id="stage">
+              <div class="pn pn-rb on"><div class="ba2" id="ba2" style="--p:100%"><img src="img/hero-rb-before.webp" alt="Original portrait photo"><div class="af"><img src="img/hero-rb-after.webp" alt="The same portrait with the background removed, hair detail kept"></div><div class="hdl"></div><input type="range" min="0" max="100" value="100" id="ba2r" aria-label="Drag to compare before and after"><span class="lb l">Before</span><span class="lb r">After</span></div></div>
+              <div class="pn pn-ps"><div class="studio" id="studio"><img class="s0" src="img/hero-ps-before.webp" alt=""><div class="s1"><img src="img/hero-ps-after.webp" alt="Grey leather satchel on a clean white backdrop with a soft shadow"></div></div></div>
+              <div class="pn pn-wm"><div class="wmbox"><img src="img/hero-wm.webp" alt="Portrait photo with a watermark"><span class="wmt" id="wmt" data-pos="br">&copy; Your Brand</span></div>
+                <div class="wmctl"><label>Opacity <input type="range" min="10" max="100" value="60" id="wmo" aria-label="Watermark opacity"></label><div class="grid3" id="wmg" role="group" aria-label="Watermark position"><button data-p="tl" aria-label="Top left"></button><button data-p="tc" aria-label="Top centre"></button><button data-p="tr" aria-label="Top right"></button><button data-p="ml" aria-label="Middle left"></button><button data-p="mc" aria-label="Centre"></button><button data-p="mr" aria-label="Middle right"></button><button data-p="bl" aria-label="Bottom left"></button><button data-p="bc" aria-label="Bottom centre"></button><button data-p="br" class="on" aria-label="Bottom right"></button></div></div></div>
+              <div class="pn pn-sm"><div class="vid"><img src="img/hero-vid.webp" alt="A video frame showing a supplement bottle"><div class="cap2" id="cap2" aria-live="off"></div></div></div>
+            </div>
+            <div class="hd-act"><span id="hdSt">Ready</span><span class="sp"></span><div class="hd-prog"><i id="hdP"></i></div><button class="hd-go" id="hdGo" type="button">Start</button></div>
+          </div>
         </div>
-        <p class="fine">Free tester build, 146 MB. Works for 30 days from first use.</p>
-        <ul class="ticks">
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m7.5 12.5 3 3 6-7"/></svg>No account or sign-up</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m7.5 12.5 3 3 6-7"/></svg>Your files never leave your PC</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m7.5 12.5 3 3 6-7"/></svg>Windows 10 and 11</li>
+        <div class="hd-toast" id="hdToast" role="status"></div>
+      </div>
+      <figcaption class="cap">Interactive demo: pick a tool, press Start, or switch the internet off. This demo replays results the real app made on free-licence stock photos. The pictures further down are real outputs too.</figcaption>
+    </figure>
+  </div>
+  <div class="strip">
+    <div class="wrap">
+      <div><b>22 tools</b><span>in one app, in three groups</span></div>
+      <div><b>0 uploads</b><span>your files are not sent to a server</span></div>
+      <div><b>1 file</b><span>about 150 MB, nothing to install</span></div>
+      <div><b>10 free</b><span>background cut-outs every day</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="tools">
+  <div class="wrap">
+    <div class="head">
+      <h2>Everything you reach for in one place.</h2>
+      <p>Built for online sellers, freelancers, students and creators who keep jumping between websites to do small jobs. Tools marked <span class="pro">PRO</span> unlock with a key.</p>
+    </div>
+    <div class="groups">
+      <div class="group">
+        <h3>Images</h3><p>Shop photos, IDs and everyday pictures.</p>
+        <ul>
+          <li><img src="icons/image-converter.svg" alt=""><div><b>Image Converter</b><small>PNG, JPG, WebP, AVIF, GIF, TIFF and iPhone HEIC, in batches. A file already in the chosen format is skipped.</small></div></li>
+          <li><img src="icons/compress-image.svg" alt=""><div><b>Compress Image</b><small>Much smaller files with no visible loss, for a whole folder at once.</small></div></li>
+          <li><img src="icons/crop.svg" alt=""><div><b>Crop</b><small>Square, 4:5, 16:9 or any shape, with a live box on the picture.</small></div></li>
+          <li><img src="icons/image-to-text-ocr.svg" alt=""><div><b>Image to Text</b><small>Copy the words out of a photo or scan (English).</small></div></li>
+          <li><img src="icons/remove-background.svg" alt=""><div><b>Remove Background</b><small>AI cut-out with a Refine brush. Save transparent, white or a colour, square for listings.</small></div><span class="lim">10 a day</span></li>
+          <li><img src="icons/enhance-image.svg" alt=""><div><b>Enhance Image</b><small>AI enlarges small pictures 2×, 3× or 4× and brings back fine detail.</small></div><span class="pro">PRO</span></li>
+          <li><img src="icons/watermark-printer.svg" alt=""><div><b>Watermark Printer</b><small>Stamp your name or logo on a whole folder, with a live preview.</small></div><span class="pro">PRO</span></li>
+          <li><img src="icons/product-photo-studio.svg" alt=""><div><b>Product Studio</b><small>Clean white or grey backdrop, even margins and a soft shadow, in listing sizes.</small></div><span class="pro">PRO</span></li>
+          <li><img src="icons/id-photo-maker.svg" alt=""><div><b>ID Photo Maker</b><small>Finds the face, sizes it, sets the background colour and prints a sheet of copies.</small></div><span class="tags"><span class="beta" title="Still being improved">BETA</span><span class="pro">PRO</span></span></li>
+          <li><img src="icons/smart-crop.svg" alt=""><div><b>Smart Crop</b><small>Finds the product and sizes it the same in every picture.</small></div><span class="tags"><span class="beta" title="Still being improved">BETA</span><span class="pro">PRO</span></span></li>
         </ul>
       </div>
-
-      <figure class="lightbox" style="margin:0">
-        <div class="chips" role="group" aria-label="Choose an example">
-          <button class="chip" type="button" data-ex="pad" aria-pressed="true">White on white</button>
-          <button class="chip" type="button" data-ex="retro" aria-pressed="false">Colourful</button>
-          <button class="chip" type="button" data-ex="console" aria-pressed="false">Whole set</button>
-        </div>
-        <div class="stage" id="stage">
-          <img class="layer" id="img-orig" src="img/pad-original.webp" alt="A white game controller photographed on a white background" width="1100" height="1002">
-          <div class="cut"><img id="img-cut" src="img/pad-cutout.webp" alt="The same controller with the background removed" width="1100" height="1002"></div>
-          <input id="range" type="range" min="0" max="100" value="50" aria-label="Drag to compare the original photo with the cut-out">
-          <div class="handle" aria-hidden="true"><span class="grip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m9 7-5 5 5 5M15 7l5 5-5 5"/></svg></span></div>
-          <span class="tag l">Original</span><span class="tag r">Cut-out</span>
-        </div>
-        <figcaption id="caption">Drag to compare. This cut-out was made by the app, offline, in under a second. Photo: Evan-Amos, public domain.</figcaption>
-      </figure>
-    </div>
-  </section>
-
-  <section class="band" id="tools" aria-labelledby="tools-h">
-    <div class="wrap">
-      <div class="sec-head">
-        <h2 id="tools-h">Everything you keep opening five websites for</h2>
-        <p>One window, one download. Add a whole folder and the app works through every file for you.</p>
+      <div class="group">
+        <h3>Video and audio</h3><p>Reels, lessons, recordings and voiceovers.</p>
+        <ul>
+          <li><img src="icons/video-converter.svg" alt=""><div><b>Video Converter</b><small>MP4, MKV, MOV, WebM, AVI or GIF. A file already in the chosen format is skipped.</small></div></li>
+          <li><img src="icons/extract-audio.svg" alt=""><div><b>Extract Audio</b><small>Save the sound of a video as MP3, M4A, WAV, FLAC or OGG, or copy it without re-encoding.</small></div></li>
+          <li><img src="icons/compress-video.svg" alt=""><div><b>Compress Video</b><small>H.265 re-encode, with optional NVIDIA GPU encoding, to make a video small enough to send.</small></div></li>
+          <li><img src="icons/speech-to-text.svg" alt=""><div><b>Speech to Text</b><small>Transcribe audio or video, or record from your microphone. Works with accents.</small></div><span class="lim">2 min clips</span></li>
+          <li><img src="icons/enhance-video.svg" alt=""><div><b>Enhance Video</b><small>AI upscaling for low-resolution footage.</small></div><span class="pro">PRO</span></li>
+          <li><img src="icons/subtitle-maker.svg" alt=""><div><b>Subtitle Maker</b><small>Writes captions, lets you fix them, then prints them onto the video.</small></div><span class="pro">PRO</span></li>
+          <li><img src="icons/silence-remover.svg" alt=""><div><b>Silence Remover</b><small>Cuts the dead pauses out of talking videos and recordings.</small></div><span class="pro">PRO</span></li>
+          <li><img src="icons/voice-cleanup.svg" alt=""><div><b>Voice Cleanup</b><small>Less hiss and hum, even volume.</small></div><span class="pro">PRO</span></li>
+          <li><img src="icons/text-to-speech.svg" alt=""><div><b>Text to Speech</b><small>Voiceovers from your script, using the voices installed on your PC.</small></div><span class="pro">PRO</span></li>
+        </ul>
       </div>
-      <div class="tools">
-        <div class="group">
-          <h3>Photos</h3>
-          <dl>
-            <dt>Remove Background</dt><dd>Studio-style product photos are cut out exactly, even white on white. It also handles people and pets. Save it transparent, on white or any colour, cropped square for online store listings.</dd>
-            <dt>Refine</dt><dd>Paint Keep or Erase over any spot the AI missed, then smooth the edges for your website or shop.</dd>
-            <dt>Image Converter</dt><dd>PNG, JPG, WebP, AVIF, GIF and TIFF. Opens iPhone HEIC photos too.</dd>
-            <dt>Compress Image</dt><dd>Much smaller files that still look the same.</dd>
-            <dt>Enhance Image</dt><dd>AI upscaling that uses your graphics card.</dd>
-          </dl>
-        </div>
-        <div class="group">
-          <h3>Video</h3>
-          <dl>
-            <dt>Video Converter</dt><dd>MP4, MKV, MOV, WebM, AVI or GIF. Pull out the audio as MP3.</dd>
-            <dt>Compress Video</dt><dd>Shrink big recordings with H.265, with optional NVIDIA GPU encoding.</dd>
-            <dt>Enhance Video</dt><dd>Sharpen old or low-resolution clips with AI upscaling.</dd>
-          </dl>
-        </div>
-        <div class="group">
-          <h3>Documents</h3>
-          <dl>
-            <dt>PDF &amp; Documents</dt><dd>PDF to text, Word or images, and back again. Scanned pages are read with OCR.</dd>
-            <dt>Spreadsheets &amp; Tables</dt><dd>Excel, CSV, ODS, HTML, JSON and PDF. Pull tables out of PDFs straight into Excel.</dd>
-            <dt>Image to Text</dt><dd>Copy the words out of any picture or screenshot.</dd>
-          </dl>
-        </div>
-        <div class="group">
-          <h3>Voice</h3>
-          <dl>
-            <dt>Speech to Text</dt><dd>Turn audio or video into text or subtitles, or record straight from your microphone. Understands accents, in English and Filipino.</dd>
-            <dt>Batch mode</dt><dd>Drop in a folder of 200 photos or recordings and walk away.</dd>
-          </dl>
-        </div>
+      <div class="group">
+        <h3>Documents</h3><p>Forms, receipts, reports and sheets.</p>
+        <ul>
+          <li><img src="icons/pdf-documents.svg" alt=""><div><b>PDF and Documents</b><small>PDF to text, Word or images; Word, text or images to PDF. Scanned pages are read with OCR.</small></div></li>
+          <li><img src="icons/spreadsheets-tables.svg" alt=""><div><b>Spreadsheets and Tables</b><small>Excel, CSV, ODS, HTML, JSON and PDF, including tables from a PDF into Excel.</small></div></li>
+          <li><img src="icons/pdf-toolkit.svg" alt=""><div><b>PDF Toolkit</b><small>Join, split, keep pages, rotate and sign.</small></div><span class="pro">PRO</span></li>
+        </ul>
+        <div class="how"><b>Every tool works the same way</b><ol><li>Drop in your files, or a whole folder.</li><li>Pick the settings on the left.</li><li>Press Start. Results are saved where you choose.</li></ol></div><p class="small" style="margin:14px 0 8px">Free covers the everyday jobs. Pro adds the specialist tools and removes the daily limits.</p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section id="refine" aria-labelledby="refine-h">
-    <div class="wrap">
-      <div class="sec-head">
-        <h2 id="refine-h">When the AI misses a spot, you fix it in seconds</h2>
-        <p>Every cut-out opens in the Refine editor. Paint Keep to bring back something that was removed, paint Erase to clear leftover background. Then press Auto smooth edges for a clean outline.</p>
+<section class="block results" id="results">
+  <div class="wrap">
+    <div class="head"><h2>Real results, not mock-ups.</h2><p>Every picture below was made by the app itself, on a free-licence stock photo, with no retouching afterwards. Drag the slider on each one.</p></div>
+
+    <article class="rs">
+      <div class="cmp alpha" style="--p:50%;--ar:3 / 2"><img loading="lazy" src="img/show-rb-before.webp" alt="Portrait of a woman with long wavy dark hair"><div class="aft"><img loading="lazy" src="img/show-rb-after.webp" alt="The same portrait cut out on a transparent background, every strand kept"></div><span class="lab l">Before</span><span class="lab r">After</span><div class="handle"></div><input type="range" min="0" max="100" value="50" aria-label="Drag to compare: Portrait of a woman with long wavy dark hair and The same portrait cut out on a transparent background, every strand kept"></div>
+      <div>
+        <h3>Remove Background</h3>
+        <p>Wavy hair on a busy backdrop is the hard case. High detail mode keeps the loose strands and gives clean edges, and the result is saved with a transparent background.</p>
+        <ul class="ticks"><li><span><b>Refine brush</b> to paint an edge back or erase a leftover.</span></li><li><span><b>Transparent, white or any colour</b>, square for marketplace listings.</span></li></ul>
+        <p class="by">Photo: maks_d on Unsplash. High detail, smoothing off.</p>
       </div>
-      <div class="shots">
-        <figure class="shot shot-a">
-          <div class="win"><div class="bar"><i></i><i></i><i></i></div><img src="img/app-removebg.webp" alt="The Remove Background tool with a finished result and a Refine button" width="1280" height="800" loading="lazy"></div>
-          <figcaption><b>Pick a photo, press Start.</b> Auto mode chooses the right engine for people or products. A Refine button appears on every result.</figcaption>
-        </figure>
-        <figure class="shot shot-b">
-          <div class="win"><div class="bar"><i></i><i></i><i></i></div><img src="img/app-refine.webp" alt="The Refine editor with Keep and Erase brushes and smoothing sliders" width="1280" height="800" loading="lazy"></div>
-          <figcaption><b>Brush, undo, zoom.</b> Your strokes are saved at the photo's full resolution, not a shrunken preview.</figcaption>
-        </figure>
+    </article>
+
+    <article class="rs flip">
+      <div class="cmp" style="--p:50%;--ar:1 / 1"><img loading="lazy" src="img/show-enh-before.webp" alt="Plain enlargement of a small photo, hair looks soft and smeared"><div class="aft"><img loading="lazy" src="img/show-enh-after.webp" alt="The same photo enlarged 4 times by Enhance Image, individual hairs sharp"></div><span class="lab l">Plain enlarge</span><span class="lab r">Enhance Image</span><div class="handle"></div><input type="range" min="0" max="100" value="50" aria-label="Drag to compare: Plain enlargement of a small photo, hair looks soft and smeared and The same photo enlarged 4 times by Enhance Image, individual hairs sharp"></div>
+      <div>
+        <h3>Enhance Image <span class="pro">PRO</span></h3>
+        <p>A small picture, enlarged four times. On the left a normal enlargement turns the hair to mush. On the right the AI redraws the detail, so the photo is usable at a bigger size.</p>
+        <p class="by">Photo: Jake Nackos on Unsplash, shrunk to 380 px for this test, then enlarged 4×. This crop is 100% of the result.</p>
+      </div>
+    </article>
+
+    <article class="rs3">
+      <div class="rs3-t"><h3>Product Studio <span class="pro">PRO</span></h3><p>Plain phone-style photos become clean shop listings: white backdrop, product centred, even margins and a soft shadow. Square 1500 px shown.</p></div>
+      <div class="cmp" style="--p:50%;--ar:1 / 1"><img loading="lazy" src="img/show-ps1-before.webp" alt="Grey leather satchel on a lilac backdrop with a reflection"><div class="aft"><img loading="lazy" src="img/show-ps1-after.webp" alt="The satchel cut out on a clean white listing photo with soft shadow"></div><span class="lab l">Before</span><span class="lab r">After</span><div class="handle"></div><input type="range" min="0" max="100" value="50" aria-label="Drag to compare: Leather handbag photographed on white and The handbag on a clean white listing photo with soft shadow"></div>
+      <div class="cmp" style="--p:50%;--ar:1 / 1"><img loading="lazy" src="img/show-ps2-before.webp" alt="Frosted pump bottle on an orange backdrop"><div class="aft"><img loading="lazy" src="img/show-ps2-after.webp" alt="The bottle on a clean white listing photo"></div><span class="lab l">Before</span><span class="lab r">After</span><div class="handle"></div><input type="range" min="0" max="100" value="50" aria-label="Drag to compare: Frosted pump bottle on an orange backdrop and The bottle on a clean white listing photo"></div>
+      <div class="cmp" style="--p:50%;--ar:1 / 1"><img loading="lazy" src="img/show-ps3-before.webp" alt="Two stacked mugs, small in the frame"><div class="aft"><img loading="lazy" src="img/show-ps3-after.webp" alt="The mugs centred on white with even margins"></div><span class="lab l">Before</span><span class="lab r">After</span><div class="handle"></div><input type="range" min="0" max="100" value="50" aria-label="Drag to compare: Two stacked mugs, small in the frame and The mugs centred on white with even margins"></div>
+      <p class="by rs3-by">Photos: mostafa mahmoudi, Birgith Roosipuu, Peaky Frames on Unsplash.</p>
+    </article>
+
+    <article class="rs2">
+      <div>
+        <h3>Smart Crop <span class="tags"><span class="beta">BETA</span><span class="pro">PRO</span></span></h3>
+        <p>Five photos with five different framings go in. Five squares come out, with each product the same size. Made for shop listings that look uniform.</p>
+        <div class="sline"><span class="sl">In</span><img loading="lazy" src="img/show-sc-in.webp" alt="Five product photos with different framings and sizes"></div>
+        <div class="sline"><span class="sl">Out</span><img loading="lazy" src="img/show-sc-out.webp" alt="The same five products as equal squares, each at the same size"></div>
+        <p class="by">Photos: mostafa mahmoudi, Birgith Roosipuu, Anirudh, Peaky Frames, Giorgio Trovato on Unsplash.</p>
+      </div>
+    </article>
+
+    <article class="rs4">
+      <figure><div class="fr"><img loading="lazy" src="img/show-id-before.webp" alt="Original portrait of a man in a suit"></div><figcaption><b>ID Photo Maker</b> <span class="tags"><span class="beta">BETA</span><span class="pro">PRO</span></span><br>Original photo</figcaption></figure>
+      <figure><div class="fr"><img loading="lazy" src="img/show-id-after.webp" alt="The ID picture, 2 by 2 inch, blue background"></div><figcaption>2×2 inch, blue background, face centred</figcaption></figure>
+      <figure><div class="fr"><img loading="lazy" src="img/show-id-sheet.webp" alt="A 4 by 6 inch print sheet with copies of the ID picture"></div><figcaption>Print sheet for 4×6 paper</figcaption></figure>
+      <figure><div class="fr"><img loading="lazy" src="img/show-wm.webp" alt="Portrait with a text watermark in the corner"></div><figcaption><b>Watermark Printer</b> <span class="pro">PRO</span><br>Your name or logo, a whole folder at once</figcaption></figure>
+      <p class="by rs4-by">Photos: itay verchik, Zoran Borojevic on Unsplash. ID Photo Maker and Smart Crop are in beta: check each result.</p>
+    </article>
+
+    <div class="honest"><b>Honest note:</b> these were chosen to show what the app does well. Glass, smoke and very fine leaves can still come out rough, and the app tells you when a photo looks like that. The Refine brush is there for the rest.</div>
+  </div>
+</section>
+
+<section class="block" id="screens">
+  <div class="wrap">
+    <div class="head"><h2>See it working.</h2><p>Every tool has the same layout: settings on the left, your picture and the result on the right.</p></div>
+    <div class="tabs" role="tablist" aria-label="App screens">
+      <button role="tab" aria-selected="true" aria-controls="p1" id="t1">Remove Background</button>
+      <button role="tab" aria-selected="false" aria-controls="p2" id="t2">Product Studio</button>
+      <button role="tab" aria-selected="false" aria-controls="p3" id="t3">Smart Crop</button>
+      <button role="tab" aria-selected="false" aria-controls="p4" id="t4">Enhance Image</button>
+      <button role="tab" aria-selected="false" aria-controls="p5" id="t5">Watermark Printer</button>
+      <button role="tab" aria-selected="false" aria-controls="p6" id="t6">Subtitle Maker</button>
+      <button role="tab" aria-selected="false" aria-controls="p7" id="t7">Image to Text</button>
+    </div>
+    <div class="panel on" id="p1" role="tabpanel" aria-labelledby="t1"><p class="cap">High detail on a wavy-hair portrait. Slide, view side by side, or look at the result alone, then paint any spot with Refine.</p><div class="win"><div class="bar"><i></i><i></i><i></i><span>Remove Background</span></div><img loading="lazy" src="img/app-removebg.webp" width="1440" height="900" alt="Remove Background with a finished cut-out beside the original"></div></div>
+    <div class="panel" id="p2" role="tabpanel" aria-labelledby="t2" hidden><p class="cap">A plain product photo becomes a square listing picture with a clean backdrop and a soft shadow. <span class="pro">PRO</span></p><div class="win"><div class="bar"><i></i><i></i><i></i><span>Product Studio</span></div><img loading="lazy" src="img/app-studio.webp" width="1440" height="900" alt="Product Studio result"></div></div>
+    <div class="panel" id="p3" role="tabpanel" aria-labelledby="t3" hidden><p class="cap">Drop in a whole batch. Every product comes out the same size on the same canvas. <span class="beta">BETA</span> <span class="pro">PRO</span></p><div class="win"><div class="bar"><i></i><i></i><i></i><span>Smart Crop</span></div><img loading="lazy" src="img/app-smartcrop.webp" width="1440" height="900" alt="Smart Crop with five finished product pictures"></div></div>
+    <div class="panel" id="p4" role="tabpanel" aria-labelledby="t4" hidden><p class="cap">A small picture enlarged four times, with the original beside the result. <span class="pro">PRO</span></p><div class="win"><div class="bar"><i></i><i></i><i></i><span>Enhance Image</span></div><img loading="lazy" src="img/app-enhance.webp" width="1440" height="900" alt="Enhance Image result"></div></div>
+    <div class="panel" id="p5" role="tabpanel" aria-labelledby="t5" hidden><p class="cap">See your watermark on your own picture while you move the settings, then stamp a whole folder. <span class="pro">PRO</span></p><div class="win"><div class="bar"><i></i><i></i><i></i><span>Watermark Printer</span></div><img loading="lazy" src="img/app-watermark.webp" width="1440" height="900" alt="Watermark Printer with a live preview"></div></div>
+    <div class="panel" id="p6" role="tabpanel" aria-labelledby="t6" hidden><p class="cap">Choose the font, colour and position, and see your style on your own video before you start. When the speech has been written, you can fix any mistakes before the video is made. <span class="pro">PRO</span></p><div class="win"><div class="bar"><i></i><i></i><i></i><span>Subtitle Maker</span></div><img loading="lazy" src="img/app-subtitles.webp" width="1440" height="900" alt="Subtitle Maker with a live caption preview"></div></div>
+    <div class="panel" id="p7" role="tabpanel" aria-labelledby="t7" hidden><p class="cap">A photographed document on the left, the text it contains on the right, ready to copy.</p><div class="win"><div class="bar"><i></i><i></i><i></i><span>Image to Text</span></div><img loading="lazy" src="img/app-ocr.webp" width="1440" height="900" alt="Image to Text showing recognised text"></div></div>
+  </div>
+</section>
+
+<section class="block" id="offline" style="background:var(--white);border-block:1px solid var(--line)">
+  <div class="wrap">
+    <div class="head"><h2>Works offline. Here is exactly what that means.</h2><p>We would rather be precise than say "100% offline". The app does your work on your PC, and needs the internet only for the few things below.</p></div>
+    <div class="ledger">
+      <div>
+        <h3><span aria-hidden="true">&#10003;</span>Stays on your PC</h3>
+        <ul>
+          <li><b>Your photos, videos, audio and documents</b><span>They are processed on your computer. They are not uploaded anywhere.</span></li>
+          <li><b>Converting, compressing, reading text, PDFs</b><span>These tools work straight after you open the app, with no internet.</span></li>
+          <li><b>Your Pro key</b><span>It is checked on your PC. No account, no sign-in screen.</span></li>
+          <li><b>Your results</b><span>They are saved in the folder you choose.</span></li>
+        </ul>
+      </div>
+      <div>
+        <h3><span aria-hidden="true">&#8599;</span>Uses the internet, sometimes</h3>
+        <ul>
+          <li><b>Getting the app</b><span>You download it once from this page.</span></li>
+          <li><b>AI engines, downloaded once</b><span>Remove Background (192 MB, or 224 MB for High detail), Speech to Text (60 to 574 MB, your choice) and some Enhance models fetch their engine the first time you use them. After that they work offline.</span></li>
+          <li><b>Cancelled-key check</b><span>When you are online, the app checks whether a Pro key has been cancelled, for example if a key was issued by mistake or shared. If you are offline it carries on as normal.</span></li>
+          <li><b>Feedback, if you send it</b><span>Only when you choose to.</span></li>
+        </ul>
       </div>
     </div>
-  </section>
+    <p class="note-line small">Windows may also reach the internet for its own reasons, such as updates. That is outside this app.</p>
+  </div>
+</section>
 
-  <section class="band" aria-labelledby="speech-h">
-    <div class="wrap">
-      <div class="sec-head">
-        <h2 id="speech-h">Speech to text that copes with real voices</h2>
-        <p>We tested it on 45 recordings of English spoken with accents from 11 language backgrounds, including Indian, Chinese, Japanese, Spanish and Polish speakers. Pick the level that fits the job.</p>
-      </div>
-      <div class="levels">
-        <div class="level"><h3>Standard</h3><div class="size">Built in, nothing to download</div><p class="d">Fastest. Good for clear speech and quick drafts.</p></div>
-        <div class="level"><h3>Better</h3><div class="size">One-time 181 MB download</div><p class="d">The balanced choice, and the default. Noticeably fewer mistakes on accented speech.</p></div>
-        <div class="level best"><h3>High accuracy</h3><div class="size">One-time 574 MB download</div><p class="d">Best for strong accents and important recordings. In our test it made about one third fewer word errors than Standard. It is slower, since it runs on your processor.</p></div>
-      </div>
-      <p class="note">Results come from our own test and will vary with your recording quality. The app also cleans up the audio and skips silence before transcribing.</p>
-    </div>
-  </section>
-
-  <section aria-labelledby="priv-h">
-    <div class="wrap private">
-      <h2 id="priv-h">Your files stay on your computer. All of them.</h2>
-      <div class="facts">
-        <div><h3>No accounts, no tracking</h3><p>There is no sign-up, no analytics and no cloud. The app never uploads what you open.</p></div>
-        <div><h3>The internet is optional</h3><p>You only go online once to download the AI models you choose, such as 196 MB for Remove Background or 32 MB for photo upscaling. After that, everything works with the cable unplugged.</p></div>
-        <div><h3>Your originals are safe</h3><p>Results are saved as new files next to the original. The app never overwrites your photo, video or document.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <section id="get" aria-labelledby="get-h" style="padding-top:0">
-    <div class="wrap">
-      <div class="get">
-        <div>
-          <h2 id="get-h">Try it free for 30 days</h2>
-          <p class="lead">The tester build has every tool unlocked. Tell me what works and what doesn't, and I'll keep improving it.</p>
-          <a class="btn btn-amber" href="https://pub-11a273028580433f93076091768a328a.r2.dev/NQ-All-in-1-MediaTool-Tester-portable.exe" id="dl-main">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0 5-5m-5 5-5-5M4 20h16"/></svg>
-            Download for Windows (146 MB)
-          </a>
-          <p class="alt">Download slow or blocked? <a href="https://github.com/NQdigital-code/nq-all-in-1-mediatool/releases/latest/download/NQ-All-in-1-MediaTool-Tester-portable.exe">Use the backup download</a>.</p>
+<section class="block" id="pricing">
+  <div class="wrap">
+    <div class="head"><h2>Free to use. Pro is free during early access.</h2><p>Free is a real tool, not a trial. While the app is new, you can ask for a Pro key at no cost and try every tool.</p></div>
+    <div class="compare">
+      <div class="plans">
+        <div class="plan">
+          <h3>Free</h3>
+          <div class="price">&#8369;0 <small>forever</small></div>
+          <p class="alt">No card, no account.</p>
+          <ul>
+            <li>Image, video and document converters</li>
+            <li>Image and video compressors, Crop, and Extract Audio</li>
+            <li>Image to Text (OCR)</li>
+            <li>PDF and Documents, Spreadsheets and Tables</li>
+            <li>Remove Background, 10 a day, with the Refine brush</li>
+            <li>Speech to Text for clips up to 2 minutes</li>
+          </ul>
+          <a class="btn btn-ghost" href="#download" data-dl>Download free</a>
         </div>
-        <ol class="steps">
-          <li><div><b>Download and double-click</b><span>There is nothing to install. It is a single file.</span></div></li>
-          <li><div><b>If Windows says "Windows protected your PC"</b><span>Click More info, then Run anyway. The tester build is not code-signed yet.</span></div></li>
-          <li><div><b>Wait for the launch screen</b><span>The app unpacks itself every time it starts, so the first window can take 10 to 30 seconds.</span></div></li>
-        </ol>
-        <div class="sum">
-          <span class="lab">SHA-256 of the download</span>
-          <code id="sha">1A910B838DA7C198705E7633302342DBD09CEC89E79A7C6D37DB5114FDA33492</code>
-          <button type="button" id="copy">Copy</button>
+        <div class="plan">
+          <span class="best">Free during early access</span>
+          <h3>Pro</h3>
+          <div class="price">&#8369;0 <small>early access</small></div>
+          <p class="alt">A free key for a limited time. One PC per key.</p>
+          <ul>
+            <li class="plus">Everything in Free, with no daily limits</li>
+            <li>Watermark Printer, in batches</li>
+            <li>Subtitle Maker with a review step</li>
+            <li>Product Studio, plus ID Photo Maker and Smart Crop (both in beta)</li>
+            <li>Enhance Image and Enhance Video</li>
+            <li>Silence Remover, Voice Cleanup, Text to Speech</li>
+            <li>PDF Toolkit: join, split, rotate, sign</li>
+          </ul>
+          <a class="btn btn-ind" href="#get-pro">Get a free Pro key</a>
         </div>
       </div>
-      <ul class="reqs"><li>Windows 10 or 11, 64-bit</li><li>8 GB RAM recommended</li><li>About 1 GB free disk space</li><li>A Vulkan graphics card for AI upscaling</li></ul>
     </div>
-  </section>
+    <div class="steps" id="get-pro">
+      <div class="step"><h3>Download and open the app</h3><p>At the bottom of the left menu, click <b>Free edition · Get Pro</b>. It shows your Device ID, which looks like <code>1A2B-3C4D-5E6F-7A8B</code>.</p></div>
+      <div class="step"><h3>Send us your Device ID</h3><p>Email it to us. There is nothing to pay. We reply with your free early-access key as soon as we can.</p></div>
+      <div class="step"><h3>Paste the key</h3><p>Paste it into the same window and press Activate. Activating needs no internet, and the key is tied to your PC.</p></div>
+    </div>
+    <p class="priceNote" style="display:flex;align-items:center;gap:14px;flex-wrap:wrap"><a class="btn btn-ind btn-sm" id="mail" href="mailto:kneelq@gmail.com?subject=NQ%20MediaTool%20Pro%20key&body=Hi%20Neil%2C%0A%0AMy%20Device%20ID%20is%3A%20%0AI%20would%20like%20a%20free%20early-access%20Pro%20key.">Email for a free Pro key</a><span>Early-access keys last for a limited time. Pro may become a paid plan later, and we will say so on this page before that happens.</span></p>
+  </div>
+</section>
 
-  <section class="band" id="faq" aria-labelledby="faq-h">
-    <div class="wrap">
-      <div class="sec-head"><h2 id="faq-h">Questions people ask</h2></div>
-      <div class="faq">
-        <details><summary>Does it really work without internet?</summary><p>Yes. Internet is only used to download the optional AI models the first time you pick them. Once they are on your PC, every tool works offline.</p></details>
-        <details><summary>What happens after the 30 days?</summary><p>The app shows "Testing period is over. Contact kneelq@gmail.com to avail the pro version." and stops opening files. Your own files and results are untouched.</p></details>
-        <details><summary>Why does Windows show a warning?</summary><p>The tester build is not code-signed yet, so Windows is cautious about any new program. Click More info, then Run anyway. You can compare the SHA-256 above with your download to be sure it is genuine.</p></details>
-        <details><summary>How good is the background removal?</summary><p>Product photos on a plain background are cut out exactly. People and pets work well on clear photos. Backgrounds that fade from light to dark, dark clothing with white graphics, hair touching the edge of the picture and very busy scenes can leave spots. That is what Refine is for.</p></details>
-        <details><summary>Can I use it on a Mac or a phone?</summary><p>Not yet. This first version is Windows only.</p></details>
-        <details><summary>Which files can it open?</summary><p>Photos in JPG, PNG, WebP, AVIF, GIF, TIFF, BMP and iPhone HEIC. Common video and audio formats, PDF, Word (.docx), Excel, CSV and more.</p></details>
-      </div>
+<section class="block" id="download" style="background:var(--white);border-block:1px solid var(--line)">
+  <div class="wrap" style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px" id="dlgrid">
+    <div>
+      <h2 style="margin-bottom:14px">Download for Windows</h2>
+      <p>Version <span id="ver">1.0.0</span> · about 150 MB · Windows 10 or 11, 64-bit. 8 GB of memory is recommended. It is a single portable file: save it anywhere and double-click.</p>
+      <p><a class="btn btn-pri" id="dlbtn" href="https://github.com/NQdigital-code/nq-all-in-1-mediatool/releases/latest"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 3v10m0 0l-4-4m4 4l4-4M4 16h12"/></svg>Download NQ All-in-1 MediaTool</a></p>
+      <p class="small">Downloads from GitHub, where every release of this app is published.</p>
     </div>
-  </section>
+    <div>
+      <h3 style="margin-bottom:10px">If Windows shows a warning</h3>
+      <p>NQ MediaTool is made by one developer and is not code-signed yet, so Windows SmartScreen may say <i>"Windows protected your PC"</i>. Click <b>More info</b>, then <b>Run anyway</b>.</p>
+      <p class="small" style="margin-bottom:6px">To check you have the genuine file, compare its SHA-256 (PowerShell: <code>Get-FileHash</code>):</p>
+      <p><span class="hash" id="sha">SHA-256 is published with each release.</span></p>
+    </div>
+  </div>
+</section>
 
-  <section aria-labelledby="pro-h">
-    <div class="wrap">
-      <div class="pro">
-        <div><h2 id="pro-h">Want the Pro version?</h2><p>Longer licences and the full toolset for people who use it every day. Tell me what you need and I'll get back to you.</p></div>
-        <a class="btn btn-amber" href="mailto:kneelq@gmail.com?subject=NQ%20All-in-1%20MediaTool%20Pro">Email kneelq@gmail.com</a>
-      </div>
+<section class="block about" id="about">
+  <div class="wrap">
+    <div>
+      <h2>About the developer</h2>
+      <p class="byline"><b>Neil Quigao</b> is a developer from Batac City, Ilocos Norte, Philippines, a father of 2 cuties.</p>
+      <p>Hi, I am Neil. I built NQ All-in-1 MediaTool for people who need everyday photo, video and document jobs done, like online sellers, students and freelancers, without uploading their files or paying for five different tools.</p>
+      <p>I am building it on my own, with no investors, and I answer the emails myself. Pro is free while the app is new, because I would rather have real people use it and tell me what to fix. Every message helps me decide what to improve next.</p>
+      <p>If the app saves you time and you would like to help me keep building it, you can support the development. Telling a friend or sending feedback helps just as much.</p>
+      <div class="cta"><a class="btn btn-amber" id="support" href="mailto:kneelq@gmail.com?subject=Supporting%20NQ%20MediaTool&body=Hi%20Neil%2C%0A%0AI%20would%20like%20to%20support%20the%20development%20of%20NQ%20All-in-1%20MediaTool.">Support the developer</a><a class="btn btn-ghost" href="mailto:kneelq@gmail.com?subject=NQ%20MediaTool%20feedback">Send feedback</a></div>
     </div>
-  </section>
+    <div class="who"><img loading="lazy" src="img/about-logo.webp" width="720" height="480" alt="Neil Quigao logo: the letters N and Q with a code symbol and a cursor"></div>
+  </div>
+</section>
+
+<section class="block" id="faq">
+  <div class="wrap">
+    <div class="head"><h2>Questions people ask</h2></div>
+    <div class="faq">
+      <details><summary>Is it really offline?</summary><div class="ans"><p>Your files are processed on your PC and are never uploaded, and the converters, compressors, OCR and PDF tools need no internet at all. A few AI tools download their engine once the first time you use them, and the app checks for cancelled Pro keys when you happen to be online. The "Offline" section above lists every case.</p></div></details>
+      <details><summary>How good is Remove Background?</summary><div class="ans"><p>Very good on people, pets and products: on our benchmark of photos with a clear subject, none of the cut-outs failed. It is weaker on glass, smoke and very fine leaves, and it warns you when a photo looks like that. The Refine brush lets you fix the rest by hand.</p></div></details>
+      <details><summary>What does the Pro key do, and is it tied to my PC?</summary><div class="ans"><p>The key unlocks the Pro tools and removes the daily limits. It is made for your PC's Device ID, so it will not work on another computer. If you replace your PC, email us and we will issue a new key.</p></div></details>
+      <details><summary>What happens when my key ends?</summary><div class="ans"><p>The app goes back to Free. Everything you made stays yours. While early access lasts you can email us for a new key.</p></div></details>
+      <details><summary>Is Pro really free? Will it stay free?</summary><div class="ans"><p>Yes, early-access keys cost nothing, and we do not ask for payment details. Keys last for a limited time. Pro may become a paid plan later; if so, we will announce it on this page first, and Free will stay free.</p></div></details>
+      <details><summary>What do you collect about me?</summary><div class="ans"><p>The app does not send your files or your usage anywhere. This website has no tracking or ads. When you ask for a Pro key, we keep your email and your Device ID, so we can support you. Details are on the <a href="privacy.html">privacy page</a>.</p></div></details>
+      <details><summary>Is it safe? Will my antivirus complain?</summary><div class="ans"><p>The app has no ads, no bundled software and no account. Because it is a new app from a small independent developer and is not code-signed yet, Windows SmartScreen or an antivirus may show a warning the first time. Check the SHA-256 on this page against your download, and email us if anything looks wrong.</p></div></details>
+      <details><summary>Can I use it for my business or shop?</summary><div class="ans"><p>Yes. Free and Pro can both be used for personal and business work. You are responsible for having the rights to the pictures, videos and documents you process.</p></div></details>
+      <details><summary>Does activating Pro need internet?</summary><div class="ans"><p>No. The key is checked on your PC. The app only looks for cancelled keys when it happens to be online.</p></div></details>
+      <details><summary>What do I need to run it?</summary><div class="ans"><p>Windows 10 or 11, 64-bit. 8 GB of memory is recommended; Remove Background uses about 1.5 GB in its standard mode. There is no installer to run.</p></div></details>
+      <details><summary>Mac, phone or Android?</summary><div class="ans"><p>Windows only for now. Other platforms may come later, with no date promised.</p></div></details>
+    </div>
+  </div>
+</section>
+
+<section class="final">
+  <div class="wrap">
+    <div><h2>Try it on your next photo.</h2><p>Download the free version, drop in a picture and see the result in seconds. If it saves you time, Pro is there.</p></div>
+    <a class="btn btn-amber" href="#download" data-dl>Download free for Windows</a>
+  </div>
+</section>
 </main>
 
 <footer>
   <div class="wrap">
-    <span>&copy; 2026 Neil Quigao. All rights reserved.</span>
-    <span class="sp">
-      <a href="https://github.com/NQdigital-code/nq-all-in-1-mediatool/blob/main/TERMS.md">Tester terms</a>
-      <a href="https://github.com/NQdigital-code/nq-all-in-1-mediatool/blob/main/THIRD_PARTY_NOTICES.md">Open-source notices</a>
-      <a href="https://github.com/NQdigital-code/nq-all-in-1-mediatool/releases">All releases</a>
-      <a href="mailto:kneelq@gmail.com">Contact</a>
-    </span>
+    <div><b>NQ All-in-1 MediaTool</b>Photo, video and document tools that run on your own PC.<br>Made in the Philippines by Neil Quigao.</div>
+    <div><b>Product</b><a href="#tools">What it does</a><a href="#pricing">Free and Pro</a><a href="#download">Download</a><a href="#faq">Questions</a></div>
+    <div><b>Contact and legal</b><a href="mailto:kneelq@gmail.com">kneelq@gmail.com</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></div>
+    <div class="legal">&copy; 2026 Neil Quigao. All rights reserved. The app is built with open-source engines, including FFmpeg, Whisper, Tesseract, Real-ESRGAN, BiRefNet and YuNet; their licences are listed inside the app under About &amp; licenses. Product names belong to their owners. Sample photos are from Unsplash and used under its free licence. Photographers: maks_d, Andre Styles, Jake Nackos, Zoran Borojevic, itay verchik, Birgith Roosipuu, Anirudh, Peaky Frames, Giorgio Trovato and mostafa mahmoudi.</div>
   </div>
 </footer>
-<script src="app.js"></script>
+<script src="site.js"></script>
+<script src="hero.js"></script>
 </body>
 </html>

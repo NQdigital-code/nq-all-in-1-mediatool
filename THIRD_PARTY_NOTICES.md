@@ -14,8 +14,9 @@ NQ All-in-1 MediaTool is built on open-source software. Thank you to these proje
 | OpenAI Whisper models (ggml conversions) | MIT | https://huggingface.co/ggerganov/whisper.cpp |
 | Silero VAD | MIT | https://github.com/snakers4/silero-vad |
 | Tesseract OCR via tesseract.js | Apache-2.0 | https://github.com/naptha/tesseract.js |
-| ISNet / DIS segmentation model (isnet-general-use) | Apache-2.0 | https://github.com/xuebinqin/DIS |
-| MODNet portrait matting model (via Xenova/modnet ONNX) | Apache-2.0 | https://github.com/ZHKKKe/MODNet |
+| **BiRefNet-lite** (background removal; ONNX conversions by studioludens and onnx-community, both MIT) | MIT | https://github.com/ZhengPeng7/BiRefNet |
+| YuNet face detector (OpenCV Zoo, used by ID Photo Maker) | MIT | https://github.com/opencv/opencv_zoo |
+| bytenode | MIT | https://github.com/bytenode/bytenode |
 | ONNX Runtime | MIT | https://onnxruntime.ai/ |
 | PDF.js | Apache-2.0 | https://mozilla.github.io/pdf.js/ |
 | @napi-rs/canvas | MIT | https://github.com/Brooooooklyn/canvas |
