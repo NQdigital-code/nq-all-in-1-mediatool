@@ -291,3 +291,14 @@ footer .legal { grid-column: 1 / -1; border-top: 1px solid #1e2a47; padding-top:
 .nlink { font-weight: 600; font-size: .95rem; text-decoration: none; }
 .nlink:hover { text-decoration: underline; }
 @media (max-width: 900px) { .nbar { grid-template-columns: 1fr; } .nc + .nc { border-left: 0; border-top: 1px solid var(--line); } .nc { padding: 22px 20px; grid-template-columns: 44px minmax(0, 1fr); gap: 14px; } .ic { width: 44px; height: 44px; } }
+
+/* download information */
+.info { background: var(--paper); border: 1px solid var(--line); border-radius: 16px; padding: 24px 26px; display: grid; gap: 16px; align-content: start; }
+.info h3 { font-size: 1.25rem; display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+.info h3 small { font: 500 .85rem var(--text); color: var(--mute); letter-spacing: 0; }
+.info .ib { border-top: 1px solid var(--line); padding-top: 14px; font-size: .95rem; }
+.info .ib > b { display: block; color: var(--ink); margin-bottom: 6px; }
+.info ul { margin: 0; padding-left: 1.15em; }
+.info li { margin-bottom: 5px; }
+.info p { margin: 0 0 8px; }
+.info .hash { display: block; font-size: .72rem; word-break: break-all; line-height: 1.5; }
