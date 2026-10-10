@@ -271,3 +271,18 @@ footer .legal { grid-column: 1 / -1; border-top: 1px solid #1e2a47; padding-top:
 .btn-amber:hover { background: #ffc531; color: #2f2100; }
 @media (max-width: 900px) { .rs, .rs.flip { grid-template-columns: 1fr; gap: 24px; margin-bottom: 52px; } .rs.flip .cmp { order: 0; } .rs4 { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 760px) { .rs3 { grid-template-columns: 1fr; } .about .wrap { grid-template-columns: 1fr; gap: 24px; } .who { max-width: 340px; } .sline { grid-template-columns: 1fr; gap: 6px; } }
+
+/* before you download */
+.notice { padding: 56px 0 8px; }
+.notice .wrap { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+.nc { border-radius: 18px; padding: 30px 32px; border: 1px solid var(--line); background: var(--white); }
+.nc h2 { font-size: clamp(1.5rem, 2.4vw, 1.95rem); margin-bottom: 12px; }
+.nc p { max-width: 36em; }
+.nc ul, .nc ol { margin: 0 0 20px; padding-left: 1.2em; }
+.nc li { margin-bottom: 6px; }
+.nc-pro { background: var(--amber-soft); border-color: #f0d98a; }
+.nc-pro h2 { color: var(--amber-ink); }
+.nc-win { background: var(--good-soft); border-color: #b9e3d4; }
+.nc-win h2 { color: #0b5a45; }
+.nc-win .small { margin: 0; color: #35594e; }
+@media (max-width: 900px) { .notice .wrap { grid-template-columns: 1fr; } .nc { padding: 24px 22px; } }
