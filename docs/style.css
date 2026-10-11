@@ -262,7 +262,7 @@ footer .legal { grid-column: 1 / -1; border-top: 1px solid #1e2a47; padding-top:
 
 /* about */
 .about .wrap { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 420px); gap: 64px; align-items: center; }
-.who { border-radius: 20px; overflow: hidden; background: #ece8de; box-shadow: 0 24px 50px rgba(15,27,51,.25); }
+.who { border-radius: 20px; overflow: hidden; background: #fff; border: 1px solid var(--line); box-shadow: 0 24px 50px rgba(15,27,51,.25); }
 .who img { width: 100%; height: auto; }
 .about h2 { margin-bottom: 14px; }
 .byline { font-size: 1.18rem; color: var(--ink); }
