@@ -21,6 +21,8 @@ NQ All-in-1 MediaTool is built on open-source software. Thank you to these proje
 | PDF.js | Apache-2.0 | https://mozilla.github.io/pdf.js/ |
 | @napi-rs/canvas | MIT | https://github.com/Brooooooklyn/canvas |
 | pdf-lib | MIT | https://github.com/Hopding/pdf-lib |
+| @pdf-lib/fontkit | MIT | https://github.com/Hopding/fontkit |
+| Liberation Sans font (from the PDF.js package, embedded in PDFs by the header and footer feature) | SIL OFL 1.1 | https://github.com/liberationfonts/liberation-fonts |
 | docx | MIT | https://github.com/dolanmiu/docx |
 | mammoth | BSD-2-Clause | https://github.com/mwilliamson/mammoth.js |
 | SheetJS (xlsx) 0.18.5 | Apache-2.0 | https://sheetjs.com/ |

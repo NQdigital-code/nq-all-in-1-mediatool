@@ -37,7 +37,7 @@ No installation: double-click to run. The app unpacks itself every time you star
 | Video & audio | Text to Speech (Pro) | Voiceovers from your script, using the voices installed on your PC |
 | Documents | PDF & Documents | PDF to text, Word or images, and Word, text or images to PDF. Scanned pages are read with OCR. |
 | Documents | Spreadsheets & Tables | Excel, CSV, ODS, HTML, JSON and PDF, including tables from a PDF into Excel |
-| Documents | PDF Toolkit (Pro) | Join, split, rotate and sign PDFs |
+| Documents | PDF Toolkit (Pro) | Join, split, rotate and sign PDFs; add headers, footers, logo and page numbers; add headers, footers, logo and page numbers |
 
 **Beta** means the tool works but its results are not always ideal yet, so please check each result before you rely on it.
 
