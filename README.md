@@ -26,7 +26,7 @@ No installation: double-click to run. The app unpacks itself every time you star
 | Images | Product Studio (Pro) | Clean, square listing photos with a soft shadow |
 | Images | ID Photo Maker (Pro, **beta**) | Finds the face and prepares ID pictures and print sheets |
 | Images | Smart Crop (Pro, **beta**) | Finds the product and sizes it the same in every picture |
-| Video & audio | Video Converter | MP4, MKV, MOV, WebM, AVI or GIF. A file already in the chosen format is skipped. |
+| Video & audio | Video Converter | MP4, MKV, MOV, WebM, AVI or GIF, with a choice of video codec (H.264, H.265, VP9, AV1 and more), sound, size and frame rate. A file can be converted to the same format with a different codec. |
 | Video & audio | Extract Audio | Save the sound of a video as MP3, M4A, WAV, FLAC or OGG, or copy it without re-encoding |
 | Video & audio | Compress Video | H.265 re-encode, optional NVIDIA GPU encoding |
 | Video & audio | Speech to Text | Transcribe audio or video (Whisper), or record from your microphone. Works with accents. |
