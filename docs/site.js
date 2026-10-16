@@ -3,6 +3,7 @@ const RELEASE = { version: '1.3.1', sha256: 'cc323c434f40701f1be9f892d8194736cfe
 document.getElementById('ver').textContent = RELEASE.version;
 document.getElementById('dlbtn').href = RELEASE.url;
 if (RELEASE.published) document.getElementById('sha').textContent = RELEASE.sha256;
+document.getElementById('tagver').textContent = RELEASE.version;
 
 // ---------------------------------------------------------------------------------------------------------------------
 // Motion layer (apple-design). Springs keep position AND velocity when re-targeted, so anything can be grabbed or
