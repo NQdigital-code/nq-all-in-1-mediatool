@@ -47,7 +47,7 @@ Every tool handles many files at once ("batch"). Results are shown as a preview 
 
 | | Free | Pro |
 |---|---|---|
-| Price | Free, no account | Free during early access (one key per PC, limited time) |
+| Price | Free, no account | On inquiry: email your Device ID (one key per PC) |
 | Remove Background | 10 a day | Unlimited |
 | Speech to Text | Clips up to 2 minutes | Any length |
 | Tools marked (Pro) above | Locked | Unlocked |
