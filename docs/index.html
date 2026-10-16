@@ -10,18 +10,18 @@
 <meta property="og:image" content="img/og.jpg">
 <meta name="theme-color" content="#0f1b33">
 <link rel="icon" href="img/icon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Instrument+Sans:wght@400;500;600;700&display=swap">
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="hero.css">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
+<div class="scrim" id="scrim"></div>
 <header class="top">
   <div class="wrap">
     <a class="brand" href="#top" aria-label="NQ All-in-1 MediaTool home"><img src="img/logo.png" alt=""><span>NQ All-in-1 <b>MediaTool</b></span></a>
     <button class="menu" id="menu" aria-label="Menu" aria-expanded="false" aria-controls="nav">&#9776;</button>
     <nav id="nav" aria-label="Main">
+      <span class="nav-ind" aria-hidden="true"></span>
       <a href="#results">Results</a>
       <a href="#tools">All 22 tools</a>
       <a href="#offline">Offline</a>
@@ -215,7 +215,7 @@
 <section class="block" id="screens">
   <div class="wrap">
     <div class="head"><h2>See it working.</h2><p>Every tool has the same layout: settings on the left, your picture and the result on the right.</p></div>
-    <div class="tabs" role="tablist" aria-label="App screens">
+    <div class="tabs" role="tablist" aria-label="App screens"><span class="seg-ind" aria-hidden="true"></span>
       <button role="tab" aria-selected="true" aria-controls="p1" id="t1">Remove Background</button>
       <button role="tab" aria-selected="false" aria-controls="p2" id="t2">Product Studio</button>
       <button role="tab" aria-selected="false" aria-controls="p3" id="t3">Smart Crop</button>
@@ -234,7 +234,7 @@
   </div>
 </section>
 
-<section class="block" id="offline" style="background:var(--white);border-block:1px solid var(--line)">
+<section class="block" id="offline">
   <div class="wrap">
     <div class="head"><h2>Works offline. Here is exactly what that means.</h2><p>We would rather be precise than say "100% offline". The app does your work on your PC, and needs the internet only for the few things below.</p></div>
     <div class="ledger">
@@ -307,7 +307,7 @@
   </div>
 </section>
 
-<section class="block" id="download" style="background:var(--white);border-block:1px solid var(--line)">
+<section class="block" id="download">
   <div class="wrap dlwrap" id="dlgrid">
     <div>
       <h2 style="margin-bottom:14px">Download for Windows</h2>

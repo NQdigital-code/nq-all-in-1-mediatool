@@ -5,9 +5,9 @@
   const T = { rb: ['Remove Background', 'Cut the subject out of a photo in one click.'], ps: ['Product Studio', 'A clean white listing photo with a soft shadow.'], wm: ['Watermark Printer', 'Stamp your name on your pictures. Move it, fade it.'], sm: ['Subtitle Maker', 'Captions that pop word by word, burned into your video.'] };
   const ORDER = ['rb', 'ps', 'wm', 'sm'], tabs = [...hd.querySelectorAll('.hd-side button')];
   const ba = $('ba2'), br = $('ba2r'), studio = $('studio'), wm = hd.querySelector('.wmbox'), wmt = $('wmt'), cap = $('cap2'), go = $('hdGo'), st = $('hdSt'), prog = $('hdP');
-  let tool = 'rb', timers = [], raf = 0, auto = !reduce, capTimer = 0;
+  let tool = 'rb', timers = [], raf = 0, animRaf = 0, auto = !reduce, capTimer = 0;
   const later = (fn, ms) => { const t = setTimeout(fn, ms); timers.push(t); return t; };
-  const clearAll = () => { timers.forEach(clearTimeout); timers = []; cancelAnimationFrame(raf); clearInterval(capTimer); };
+  const clearAll = () => { timers.forEach(clearTimeout); timers = []; cancelAnimationFrame(raf); cancelAnimationFrame(animRaf); clearInterval(capTimer); };
   const setP = (v) => { ba.style.setProperty('--p', v + '%'); br.value = v; };
   function reset() {
     setP(100); studio.classList.remove('done'); wm.classList.remove('done'); cap.innerHTML = ''; prog.style.width = '0';
@@ -29,8 +29,8 @@
   }
   function anim(from, to, ms) {
     const t0 = performance.now(), e = (k) => 1 - Math.pow(1 - k, 3);
-    const f = (n) => { const k = Math.min(1, (n - t0) / ms); setP(from + (to - from) * e(k)); if (k < 1) raf = requestAnimationFrame(f); };
-    raf = requestAnimationFrame(f);
+    const f = (n) => { const k = Math.min(1, (n - t0) / ms); setP(from + (to - from) * e(k)); if (k < 1) animRaf = requestAnimationFrame(f); };
+    animRaf = requestAnimationFrame(f);
   }
   const PH = ['Keeps your coffee hot', 'for twelve hours.'];
   function captions() {
@@ -55,7 +55,9 @@
   hd.addEventListener('keydown', stopAuto);
   tabs.forEach((b) => b.addEventListener('click', () => { stopAuto(); show(b.dataset.tool); }));
   go.addEventListener('click', () => { stopAuto(); run(); });
-  br.addEventListener('input', () => ba.style.setProperty('--p', br.value + '%'));
+  // grabbing the slider hands control to the visitor: the reveal animation stops at once instead of fighting their hand
+  ['pointerdown', 'keydown'].forEach((ev) => br.addEventListener(ev, () => cancelAnimationFrame(animRaf)));
+  br.addEventListener('input', () => { cancelAnimationFrame(animRaf); ba.style.setProperty('--p', br.value + '%'); });
   $('wmo').addEventListener('input', (e) => { wmt.style.opacity = e.target.value / 100; });
   $('wmg').addEventListener('click', (e) => {
     const b = e.target.closest('button'); if (!b) return; wmt.dataset.pos = b.dataset.p;
