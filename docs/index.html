@@ -46,32 +46,13 @@
       </div>
       <ul class="facts"><li>No account or sign-in</li><li>No installer, just one file</li><li>Free to start</li></ul>
     </div>
-    <figure class="shot">
-      <div class="hd" id="hd" data-tool="rb" aria-label="Interactive demo of the app">
-        <div class="hd-bar"><i></i><i></i><i></i><span class="hd-ttl">NQ All-in-1 MediaTool</span>
-          <button class="hd-net" id="net" type="button" aria-pressed="false" title="Pretend to switch the internet off"><span class="dot"></span><span id="netTxt">Internet on</span></button></div>
-        <div class="hd-body">
-          <div class="hd-side" role="tablist" aria-label="Choose a tool to try">
-            <button role="tab" data-tool="rb" aria-selected="true"><img src="icons/remove-background.svg" alt=""><span>Remove Background</span></button>
-            <button role="tab" data-tool="ps" aria-selected="false"><img src="icons/product-photo-studio.svg" alt=""><span>Product Studio</span><em>PRO</em></button>
-            <button role="tab" data-tool="wm" aria-selected="false"><img src="icons/watermark-printer.svg" alt=""><span>Watermark Printer</span><em>PRO</em></button>
-            <button role="tab" data-tool="sm" aria-selected="false"><img src="icons/subtitle-maker.svg" alt=""><span>Subtitle Maker</span><em>PRO</em></button>
-          </div>
-          <div class="hd-main">
-            <div class="hd-head"><b id="hdT">Remove Background</b><span id="hdS">Cut the subject out of a photo in one click.</span></div>
-            <div class="hd-stage" id="stage">
-              <div class="pn pn-rb on"><div class="ba2" id="ba2" style="--p:100%"><img src="img/hero-rb-before.webp" alt="Original portrait photo"><div class="af"><img src="img/hero-rb-after.webp" alt="The same portrait with the background removed, hair detail kept"></div><div class="hdl"></div><input type="range" min="0" max="100" value="100" id="ba2r" aria-label="Drag to compare before and after"><span class="lb l">Before</span><span class="lb r">After</span></div></div>
-              <div class="pn pn-ps"><div class="studio" id="studio"><img class="s0" src="img/hero-ps-before.webp" alt=""><div class="s1"><img src="img/hero-ps-after.webp" alt="Grey leather satchel on a clean white backdrop with a soft shadow"></div></div></div>
-              <div class="pn pn-wm"><div class="wmbox"><img src="img/hero-wm.webp" alt="Portrait photo with a watermark"><span class="wmt" id="wmt" data-pos="br">&copy; Your Brand</span></div>
-                <div class="wmctl"><label>Opacity <input type="range" min="10" max="100" value="60" id="wmo" aria-label="Watermark opacity"></label><div class="grid3" id="wmg" role="group" aria-label="Watermark position"><button data-p="tl" aria-label="Top left"></button><button data-p="tc" aria-label="Top centre"></button><button data-p="tr" aria-label="Top right"></button><button data-p="ml" aria-label="Middle left"></button><button data-p="mc" aria-label="Centre"></button><button data-p="mr" aria-label="Middle right"></button><button data-p="bl" aria-label="Bottom left"></button><button data-p="bc" aria-label="Bottom centre"></button><button data-p="br" class="on" aria-label="Bottom right"></button></div></div></div>
-              <div class="pn pn-sm"><div class="vid"><img src="img/hero-vid.webp" alt="A video frame showing a supplement bottle"><div class="cap2" id="cap2" aria-live="off"></div></div></div>
-            </div>
-            <div class="hd-act"><span id="hdSt">Ready</span><span class="sp"></span><div class="hd-prog"><i id="hdP"></i></div><button class="hd-go" id="hdGo" type="button">Start</button></div>
-          </div>
-        </div>
-        <div class="hd-toast" id="hdToast" role="status"></div>
+    <figure class="shot promo">
+      <div class="pv" id="pv">
+        <picture><source media="(max-width: 700px)" srcset="img/promo-poster-tall.webp"><img class="pv-poster" id="pvPoster" src="img/promo-poster.webp" width="1280" height="720" alt="A frame from the promo video: Remove Background and Enhance Image before-and-after sliders"></picture>
+        <video class="pv-vid" id="pvVid" playsinline preload="none" controls hidden aria-label="NQ All-in-1 MediaTool tour video"></video>
+        <button class="pv-play" id="pvPlay" type="button" aria-label="Play the 72-second tour video, with sound"><span class="pv-ico" aria-hidden="true"><svg viewBox="0 0 24 24" width="34" height="34" fill="currentColor"><path d="M8 5.5v13a1 1 0 0 0 1.5.86l10.5-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5z"/></svg></span><span class="pv-txt">Watch the 72-second tour</span></button>
       </div>
-      <figcaption class="cap">Interactive demo: pick a tool, press Start, or switch the internet off. This demo replays results the real app made on free-licence stock photos. The pictures further down are real outputs too.</figcaption>
+      <figcaption class="cap">A 72-second tour set to music, built from real screens and results of the app.</figcaption>
     </figure>
   </div>
   <div class="strip">
@@ -162,6 +143,37 @@
 <section class="block results" id="results">
   <div class="wrap">
     <div class="head"><h2>Real results, not mock-ups.</h2><p>Every picture below was made by the app itself, on a free-licence stock photo, with no retouching afterwards. Drag the slider on each one.</p></div>
+
+    <div class="rdemo" id="try">
+      <h3>Try it yourself</h3>
+      <p>Pick a tool, press Start, or switch the internet off. The demo replays results the real app made on free-licence stock photos; more real results are below.</p>
+      <figure class="demo-fig">
+      <div class="hd" id="hd" data-tool="rb" aria-label="Interactive demo of the app">
+        <div class="hd-bar"><i></i><i></i><i></i><span class="hd-ttl">NQ All-in-1 MediaTool</span>
+          <button class="hd-net" id="net" type="button" aria-pressed="false" title="Pretend to switch the internet off"><span class="dot"></span><span id="netTxt">Internet on</span></button></div>
+        <div class="hd-body">
+          <div class="hd-side" role="tablist" aria-label="Choose a tool to try">
+            <button role="tab" data-tool="rb" aria-selected="true"><img src="icons/remove-background.svg" alt=""><span>Remove Background</span></button>
+            <button role="tab" data-tool="ps" aria-selected="false"><img src="icons/product-photo-studio.svg" alt=""><span>Product Studio</span><em>PRO</em></button>
+            <button role="tab" data-tool="wm" aria-selected="false"><img src="icons/watermark-printer.svg" alt=""><span>Watermark Printer</span><em>PRO</em></button>
+            <button role="tab" data-tool="sm" aria-selected="false"><img src="icons/subtitle-maker.svg" alt=""><span>Subtitle Maker</span><em>PRO</em></button>
+          </div>
+          <div class="hd-main">
+            <div class="hd-head"><b id="hdT">Remove Background</b><span id="hdS">Cut the subject out of a photo in one click.</span></div>
+            <div class="hd-stage" id="stage">
+              <div class="pn pn-rb on"><div class="ba2" id="ba2" style="--p:100%"><img src="img/hero-rb-before.webp" alt="Original portrait photo"><div class="af"><img src="img/hero-rb-after.webp" alt="The same portrait with the background removed, hair detail kept"></div><div class="hdl"></div><input type="range" min="0" max="100" value="100" id="ba2r" aria-label="Drag to compare before and after"><span class="lb l">Before</span><span class="lb r">After</span></div></div>
+              <div class="pn pn-ps"><div class="studio" id="studio"><img class="s0" src="img/hero-ps-before.webp" alt=""><div class="s1"><img src="img/hero-ps-after.webp" alt="Grey leather satchel on a clean white backdrop with a soft shadow"></div></div></div>
+              <div class="pn pn-wm"><div class="wmbox"><img src="img/hero-wm.webp" alt="Portrait photo with a watermark"><span class="wmt" id="wmt" data-pos="br">&copy; Your Brand</span></div>
+                <div class="wmctl"><label>Opacity <input type="range" min="10" max="100" value="60" id="wmo" aria-label="Watermark opacity"></label><div class="grid3" id="wmg" role="group" aria-label="Watermark position"><button data-p="tl" aria-label="Top left"></button><button data-p="tc" aria-label="Top centre"></button><button data-p="tr" aria-label="Top right"></button><button data-p="ml" aria-label="Middle left"></button><button data-p="mc" aria-label="Centre"></button><button data-p="mr" aria-label="Middle right"></button><button data-p="bl" aria-label="Bottom left"></button><button data-p="bc" aria-label="Bottom centre"></button><button data-p="br" class="on" aria-label="Bottom right"></button></div></div></div>
+              <div class="pn pn-sm"><div class="vid"><img src="img/hero-vid.webp" alt="A video frame showing a supplement bottle"><div class="cap2" id="cap2" aria-live="off"></div></div></div>
+            </div>
+            <div class="hd-act"><span id="hdSt">Ready</span><span class="sp"></span><div class="hd-prog"><i id="hdP"></i></div><button class="hd-go" id="hdGo" type="button">Start</button></div>
+          </div>
+        </div>
+        <div class="hd-toast" id="hdToast" role="status"></div>
+      </div>
+      </figure>
+    </div>
 
     <article class="rs">
       <div class="cmp alpha" style="--p:50%;--ar:3 / 2"><img loading="lazy" src="img/show-rb-before.webp" alt="Portrait of a woman with long wavy dark hair"><div class="aft"><img loading="lazy" src="img/show-rb-after.webp" alt="The same portrait cut out on a transparent background, every strand kept"></div><span class="lab l">Before</span><span class="lab r">After</span><div class="handle"></div><input type="range" min="0" max="100" value="50" aria-label="Drag to compare: Portrait of a woman with long wavy dark hair and The same portrait cut out on a transparent background, every strand kept"></div>

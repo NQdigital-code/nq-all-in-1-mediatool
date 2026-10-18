@@ -106,3 +106,15 @@ tabs.forEach((t, i) => { t.addEventListener('click', () => pick(t)); t.addEventL
 const current = () => tabs.find((x) => x.getAttribute('aria-selected') === 'true') || tabs[0];
 pick(tabs[0], true);
 addEventListener('resize', () => seg && seg.snap(current())); addEventListener('load', () => seg && seg.snap(current()));
+
+// ---------------------------------------------------------------------------------------------------------------------
+// hero promo video: nothing is downloaded until the visitor presses play. Phones in portrait get the vertical cut.
+const PROMO = { wide: 'https://pub-11a273028580433f93076091768a328a.r2.dev/NQ-MediaTool-promo-16x9.mp4', tall: 'https://pub-11a273028580433f93076091768a328a.r2.dev/NQ-MediaTool-promo-9x16.mp4' };
+(() => {
+  const pv = document.getElementById('pv'), v = document.getElementById('pvVid'), btn = document.getElementById('pvPlay'); if (!pv || !v || !btn) return;
+  btn.addEventListener('click', () => {
+    v.src = matchMedia('(max-width: 700px)').matches ? PROMO.tall : PROMO.wide; v.hidden = false; pv.classList.add('playing');
+    const p = v.play(); if (p && p.catch) p.catch(() => { /* the browser asks for another tap: the video has its own controls */ });
+    if ('IntersectionObserver' in window) new IntersectionObserver((es) => { if (!es[0].isIntersecting && !v.paused) v.pause(); }, { threshold: .2 }).observe(pv);
+  });
+})();
