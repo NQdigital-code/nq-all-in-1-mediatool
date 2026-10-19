@@ -1,5 +1,5 @@
 // release details shown on the page. `node release.js path\to\exe version` rewrites this block.
-const RELEASE = { version: '1.3.1', sha256: 'cc323c434f40701f1be9f892d8194736cfe540310599e10aa0ec95c7c2d2f1d6', url: 'https://pub-11a273028580433f93076091768a328a.r2.dev/NQ-All-in-1-MediaTool-portable.exe', published: true };
+const RELEASE = { version: '1.3.1', sha256: 'cc323c434f40701f1be9f892d8194736cfe540310599e10aa0ec95c7c2d2f1d6', url: 'https://nq-pulse.nq-digital.workers.dev/download/NQ-All-in-1-MediaTool-portable.exe', published: true };
 document.getElementById('ver').textContent = RELEASE.version;
 document.getElementById('dlbtn').href = RELEASE.url;
 if (RELEASE.published) document.getElementById('sha').textContent = RELEASE.sha256;
@@ -117,4 +117,16 @@ const PROMO = { wide: 'https://pub-11a273028580433f93076091768a328a.r2.dev/NQ-Me
     const p = v.play(); if (p && p.catch) p.catch(() => { /* the browser asks for another tap: the video has its own controls */ });
     if ('IntersectionObserver' in window) new IntersectionObserver((es) => { if (!es[0].isIntersecting && !v.paused) v.pause(); }, { threshold: .2 }).observe(pv);
   });
+})();
+
+// ---------------------------------------------------------------------------------------------------------------------
+// anonymous counting: downloads are counted by the server that serves the file; this only reports clicks on the email buttons.
+// No cookies, no personal data. If the counter is unreachable the download button falls back to the direct file.
+const GITHUB_DIRECT = 'https://github.com/NQdigital-code/nq-all-in-1-mediatool/releases/latest/download/NQ-All-in-1-MediaTool-portable.exe';
+const PULSE = 'https://nq-pulse.nq-digital.workers.dev', R2_DIRECT = 'https://pub-11a273028580433f93076091768a328a.r2.dev/NQ-All-in-1-MediaTool-portable.exe';
+(() => {
+  const ping = (t, p) => { try { const b = JSON.stringify({ t, p: String(p || '').slice(0, 40) }); if (!(navigator.sendBeacon && navigator.sendBeacon(PULSE + '/e', new Blob([b], { type: 'text/plain' })))) fetch(PULSE + '/e', { method: 'POST', body: b, keepalive: true, headers: { 'content-type': 'text/plain' } }).catch(() => {}); } catch (e) { /* counting is optional */ } };
+  document.addEventListener('click', (e) => { const a = e.target.closest && e.target.closest('a[href^="mailto:"]'); if (!a) return; ping(a.id === 'mail' ? 'inquire' : 'contact', a.id || (a.closest('section') || {}).id || 'page'); });
+  // the counter pauses itself near its free limits: then visitors get a backup link (the GitHub copy if the file reads are what ran low, otherwise the direct file)
+  fetch(PULSE + '/health', { cache: 'no-store' }).then((r) => (r.ok ? '' : r.text())).catch(() => 'down').then((why) => { if (!why) return; const b = document.getElementById('dlbtn'); if (b) b.href = why === 'paused-files' ? GITHUB_DIRECT : R2_DIRECT; });
 })();
