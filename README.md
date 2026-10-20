@@ -12,7 +12,7 @@ Go to the **[Releases page](../../releases/latest)** and download `NQ-All-in-1-M
 
 No installation: double-click to run. The app unpacks itself every time you start it, so the first screen can take 10 to 30 seconds to appear on a slower PC. Please wait for the launch screen to finish.
 
-## What it does (22 tools)
+## What it does (23 tools)
 
 | Group | Tool | What you can do |
 |---|---|---|
@@ -20,6 +20,7 @@ No installation: double-click to run. The app unpacks itself every time you star
 | Images | Compress Image | Smaller files with no visible quality loss |
 | Images | Crop | Square, 4:5, 16:9 or any shape, with a live box on the picture. Works on a whole folder. |
 | Images | Image to Text (OCR) | Read the text in a photo or scan (English) |
+| Images | Color Picker | Find the main colours of a picture, with hex codes and swatches |
 | Images | Remove Background | Cuts out people, pets and products. Transparent, white or colour background. **Refine** brush to fix any spot. |
 | Images | Enhance Image (Pro) | AI upscaling for small pictures |
 | Images | Watermark Printer (Pro) | Stamp your name or logo on a whole folder |
