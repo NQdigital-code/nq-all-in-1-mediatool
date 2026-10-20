@@ -74,7 +74,7 @@ p { margin: 0 0 1em; text-wrap: pretty; }
 .btn svg { width: 18px; height: 18px; }
 
 /* hero: one clear message, then the product */
-.hero { position: relative; isolation: isolate; overflow: clip; padding: 72px 0 0; }
+.hero { position: relative; isolation: isolate; overflow: clip; margin-top: -68px; padding: 140px 0 0; } /* runs up behind the floating header (56px + 12px gap) so no plain strip shows above it */
 .hero::before { content: ""; position: absolute; inset: -8% -10% auto; height: 760px; z-index: -1; pointer-events: none;
   background: radial-gradient(55% 55% at 50% 0%, rgba(79,70,229,.11), transparent 72%), radial-gradient(34% 40% at 88% 8%, rgba(245,179,22,.14), transparent 70%), radial-gradient(30% 36% at 10% 14%, rgba(79,70,229,.06), transparent 70%); }
 .hero > .wrap { display: grid; justify-items: center; gap: 60px; }
@@ -331,7 +331,7 @@ footer .legal { grid-column: 1 / -1; border-top: 1px solid #1e2a47; padding-top:
 @media (max-width: 760px) {
   .wrap { width: calc(100% - 40px); }
   .groups, .steps, .plans, .ledger, footer .wrap { grid-template-columns: 1fr; }
-  .hero { padding-top: 44px; } .hero > .wrap { gap: 40px; }
+  .hero { padding-top: 112px; } .hero > .wrap { gap: 40px; }
   .rs3 { grid-template-columns: 1fr; } .about .wrap { grid-template-columns: 1fr; } .who { max-width: 340px; } .sline { grid-template-columns: 1fr; gap: 6px; }
   .strip { padding-top: 44px; } .strip .wrap > div { padding: 16px 18px; }
   .plan { padding: 30px 24px 26px; } .ledger > div { padding: 28px 24px 22px; }
