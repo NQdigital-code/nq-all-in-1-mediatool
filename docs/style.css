@@ -381,3 +381,4 @@ footer .legal { grid-column: 1 / -1; border-top: 1px solid #1e2a47; padding-top:
 .rdemo h3 { margin-bottom: 10px; }
 .rdemo > p { max-width: 44em; margin: 0 auto 26px; color: #b4bfd9; }
 .demo-fig { margin: 0 auto; width: 100%; text-align: left; }
+.cap a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
